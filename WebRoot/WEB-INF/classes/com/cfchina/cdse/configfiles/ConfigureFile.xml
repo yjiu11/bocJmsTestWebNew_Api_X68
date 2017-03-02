@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Basic>
+  <RunTimeEnvironment DomainDir="D:/FTP/CDS/strategy" JNDIDES="" QueueConnectionFactory="javax/jms/JmsConnectionFactory" RecvQueueName="CDSReqQ" SendQueueName="CDSRespQ" WebServerContextFactory="com.ibm.websphere.naming.WsnInitialContextFactory" JmsContextUrl="iiop://localhost:2809/" WebUser="websphere" WebPassword="websphere" StrategyListenerTime="300000">
+<LogDefinition CurrentPoint="000001" LogDir="D:/FTP/CDS/log" Size="50000">
+  <LogFileType>
+    <type Name="PersonalCard" fileName="PersonalCard"/>
+    <type Name="ComanyCard" fileName="ComanyCard"/>
+    <type Name="Error" fileName="Error"/>
+    <type Name="AppLog" fileName="AppLog"/>
+  </LogFileType>
+</LogDefinition>
+<Report Dir="D:/FTP/CDS/reports"/>
+<Interface HasExtraArithCfg="false" Dir="D:/FTP/CDS/interface" />
+<DataSource HasDataBase="true" DataSourceQ="CDSEDataSaveQ" />
+</RunTimeEnvironment></Basic>

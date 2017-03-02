@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<FlowViewLayout Version="1.2">
+  <StrutsActivity path="/CDS-0010.do" location="650,250" dimension="280,84" />
+  <StrutsActivity path="/CDS-0020.do" location="650,50" dimension="292,84" />
+  <StrutsActivity path="/CreateData.html" location="50,250" dimension="136,48" />
+  <StrutsActivity path="/ExportApplication.jsp" location="350,250" dimension="172,48" />
+  <StrutsActivity path="/MyJsp.jsp" location="50,350" dimension="94,53" />
+  <StrutsActivity path="/CreateData.jsp" />
+  <StrutsTransition id="/CDS-0010.do,showResult,/ExportApplication.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="650,283" />
+      <AbsolutePoint location="522,283" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/CDS-0010.do,input,/CreateData.html,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="650,313" />
+      <AbsolutePoint location="118,313" />
+      <AbsolutePoint location="118,298" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/CDS-0010.do,input,/CreateData.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="790,292" />
+      <AbsolutePoint location="0,0" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/CDS-0010.do,input,/MyJsp.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="650,313" />
+      <AbsolutePoint location="97,313" />
+      <AbsolutePoint location="97,350" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/CDS-0020.do,showResult,/ExportApplication.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="650,92" />
+      <AbsolutePoint location="436,92" />
+      <AbsolutePoint location="436,250" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+</FlowViewLayout>
+

@@ -1,0 +1,145 @@
+BODY {
+	FONT-SIZE: 9pt; FONT-FAMILY: Arial
+}
+TD {
+	FONT-SIZE: 9pt; FONT-FAMILY: Arial
+}
+
+
+SELECT {
+	FONT-SIZE: 9pt; FONT-FAMILY: Arial
+}
+strong.color{
+COLOR: red;
+}
+A {
+	FONT-SIZE: 9pt; COLOR: #000000; FONT-FAMILY: Arial; TEXT-DECORATION: none
+}
+A:hover {
+	FONT-SIZE: 9pt; COLOR: blue; FONT-FAMILY: Arial; TEXT-DECORATION: underline
+}
+INPUT.button {
+	BORDER-RIGHT: #000000 1px double; BORDER-TOP: #000000 1px double; FONT-SIZE: 9pt; BORDER-LEFT: #000000 1px double; CURSOR: hand; COLOR: #000000; BORDER-BOTTOM: #000000 1px double; HEIGHT: 20px; BACKGROUND-COLOR: #ffffff
+}
+
+INPUT.button1 {border: 1px white double; font-size: 9pt; color: #000000; background-color: #CCCCCC}
+
+INPUT.button2 {
+	BORDER-RIGHT: #606060 2px double; BORDER-TOP: #000000 1px double; FONT-SIZE: 9pt; BORDER-LEFT: #000000 1px double; WIDTH: 80px; CURSOR: hand; COLOR: #000000; BORDER-BOTTOM: #606060 2px double; HEIGHT: 20px; BACKGROUND-COLOR: #d2e9ff
+}
+
+INPUT.button3 {border: 1px #000000 double; font-size: 9pt; color: #000000; background-color: white}
+INPUT.button8 {
+
+	border: 1px #000000 double; font-size: 9pt; color: #000000; background-color: #EEEEEE
+}
+
+
+INPUT.button4 {border: 1px #000000 double; font-size: 9pt; color: #000000; background-color: white}
+
+INPUT.button5 {border-style: solid; border-width: 1; padding-left: 4; padding-right: 4; padding-top: 1; padding-bottom: 1}
+
+INPUT.button_fl {border-style: solid; border-width: 1; padding-left: 4; padding-right: 4; padding-top: 1; padding-bottom: 1; font-size = 9pt}
+
+
+INPUT.input {
+	BORDER-RIGHT: #000000 1px double; BORDER-TOP: #000000 1px double; FONT-SIZE: 9pt; BORDER-LEFT: #000000 1px double; COLOR: #000000; BORDER-BOTTOM: #000000 1px double; FONT-FAMILY: Arial; HEIGHT: 20px; BACKGROUND-COLOR: #ffffff
+}
+INPUT.input_show {
+	BORDER-RIGHT: #FAFAFA 1px double; BORDER-TOP: #FAFAFA 1px double; FONT-SIZE: 9pt; font-COLOR: #000000;BORDER-LEFT: #FAFAFA 1px double; BORDER-BOTTOM: #FAFAFA 1px double; FONT-FAMILY: Arial; HEIGHT: 20px; BACKGROUND-COLOR: #FAFAFA
+}
+INPUT.input_r {
+	color: #000000; background-color: #D9D9D9;font-size: 9pt
+}
+INPUT.input_num{
+	color: #000000; FONT-SIZE: 9pt; TEXT-ALIGN: right 
+}
+INPUT.input_txt{
+	color: #000000; FONT-SIZE: 9pt;  
+}
+
+INPUT.input_b {
+	color: #000000; background-color: #FFE6FF;font-size: 9pt
+}
+SELECT.select_r {
+	BORDER-RIGHT: #000000 1px double; BORDER-TOP: #000000 1px double; FONT-SIZE: 9pt; BORDER-LEFT: #000000 1px double; BORDER-BOTTOM: #000000 1px double; FONT-FAMILY: Arial; HEIGHT: 20px; background-color: #C0C0C0
+}
+TD.BACKGROUND_a {
+	BACKGROUND-COLOR: #EEEEEE
+}
+TD.BACKGROUND_b {
+	BACKGROUND-COLOR: #ECF4FF
+}
+TD.BACKGROUND_c {
+	BACKGROUND-COLOR: #FAFAFA
+}
+
+TD.BACKGROUND_d {
+	BACKGROUND-COLOR: #F1DFFF
+}
+
+TD.BACKGROUND_e {
+	BACKGROUND-COLOR: #63639C
+}
+
+TD.BACKGROUND_center_c {
+	FONT-SIZE: 9pt; COLOR: #000000; BACKGROUND-COLOR: #F6F5FF; TEXT-ALIGN: center
+}
+
+TD.headerbar
+{
+    FONT-SIZE: 12pt;
+    COLOR: D6E7FF;
+    FONT-FAMILY: ºÚÌå;
+    BACKGROUND-COLOR: #63639C;
+    TEXT-ALIGN: center;
+    bgcolor: "#1019AD"
+}
+
+TD.headerbar2
+{
+    FONT-SIZE: 12pt;
+    COLOR: #000000;
+    FONT-FAMILY: "ËÎÌå";
+    BACKGROUND-COLOR: #DFDFDF;
+    TEXT-ALIGN: center;
+    bgcolor: "#1019AD"
+}
+TD.pt12
+{
+    FONT-SIZE: 12pt;
+    COLOR: #000000;
+    FONT-FAMILY: "ºÚÌå";
+    BACKGROUND-COLOR: #DFDFDF;
+    TEXT-ALIGN: center;
+    bgcolor: "#1019AD"
+}
+TABLE.one {
+	BACKGROUND-COLOR: #1019AD
+}
+TABLE.BACKGROUND_center {
+	BACKGROUND-COLOR: #ffffff;TEXT-ALIGN: center
+}
+TABLE.border_c{
+	border-collapse: collapse; border-style: solid; 
+	border-color: #C0C0C0; bordercolordark=#C0C0C0; bordercolorlight=#C0C0C0;
+ }
+TABLE.border_a{
+	border-collapse: collapse; border-style: solid; 
+	border-color: #66CCFF; bordercolordark=#66CCFF; bordercolorlight=#66CCFF;
+ }
+TABLE.two {
+	BACKGROUND-COLOR: #f0e8d8
+}
+.align_center {
+	TEXT-ALIGN: center
+}
+.align_right {
+	TEXT-ALIGN: right
+}
+.align_left {
+	TEXT-ALIGN: left
+}
+.textarea {
+	BORDER-RIGHT: 1px solid; BORDER-TOP: 1px solid; FONT-SIZE: 9pt; BORDER-LEFT: 1px solid; COLOR: #000000; BORDER-BOTTOM: 1px solid; FONT-FAMILY: Arial; BACKGROUND-COLOR: #ffffff
+}

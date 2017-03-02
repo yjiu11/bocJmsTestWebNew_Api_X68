@@ -1,0 +1,4103 @@
+<?xml version="1.0" encoding="GB2312"?>
+<CDS>
+	<ControlLogic Desc="百度工薪贷" DomainDesc="信而富审批策略"
+		DomainName="CREDIT_QUERY" GenerateDate="2016-2-1 6:14:02" Name="BAIDU_GX"
+		ReleaseDate="" Ver="46" />
+	<ExtAttbiutes>
+		<Attribute Desc="年龄" IsDim="0" Name="AT0003" Type="N" />
+		<Attribute Desc="是否提供有效的二代身份证" IsDim="1" Name="AT0004" Type="N">
+			<Item Code="1" Desc="是" />
+			<Item Code="2" Desc="否" />
+		</Attribute>
+		<Attribute Desc="是否提供最近3个月的银行打卡工资记录(本来6个月)" IsDim="1" Name="AT0008"
+			Type="N">
+			<Item Code="1" Desc="是" />
+			<Item Code="2" Desc="否" />
+		</Attribute>
+		<Attribute Desc="手机账龄月数" IsDim="0" Name="AT0015" Type="N" />
+		<Attribute Desc="是否属于禁入行业" IsDim="1" Name="AT0016" Type="N">
+			<Item Code="1" Desc="是" />
+			<Item Code="2" Desc="否" />
+		</Attribute>
+		<Attribute Desc="法院执行记录时长" IsDim="0" Name="AT0017" Type="N" />
+		<Attribute Desc="是否属于信而富黑名单" IsDim="1" Name="AT0020" Type="N">
+			<Item Code="1" Desc="是" />
+			<Item Code="2" Desc="否" />
+		</Attribute>
+		<Attribute Desc="是否有本地户籍" IsDim="1" Name="AT0024" Type="N">
+			<Item Code="1" Desc="是" />
+			<Item Code="2" Desc="否" />
+		</Attribute>
+		<Attribute Desc="是否有房产证" IsDim="1" Name="AT0040" Type="N">
+			<Item Code="1" Desc="是" />
+			<Item Code="2" Desc="否" />
+		</Attribute>
+		<Attribute Desc="房产面积" IsDim="0" Name="AT0094" Type="N" />
+		<Attribute Desc="月收入" IsDim="0" Name="AT0101" Type="N" />
+		<Attribute Desc="分公司" IsDim="0" Name="AT0123" Type="C" />
+		<Attribute Desc="最近3个月本人查询次数" IsDim="0" Name="AT0136" Type="N" />
+		<Attribute Desc="最近6个月贷款M2次数" IsDim="0" Name="AT0143" Type="N" />
+		<Attribute Desc="最近12个月贷款M2的次数" IsDim="0" Name="AT0146"
+			Type="N" />
+		<Attribute Desc="最近12个月贷款M3的次数" IsDim="0" Name="AT0147"
+			Type="N" />
+		<Attribute Desc="最近12个月贷款M3+的次数" IsDim="0" Name="AT0148"
+			Type="N" />
+		<Attribute Desc="最近6个月信用卡M2的次数" IsDim="0" Name="AT0154"
+			Type="N" />
+		<Attribute Desc="最近6个月信用卡M3+的次数" IsDim="0" Name="AT0155"
+			Type="N" />
+		<Attribute Desc="最近12个月信用卡M2的次数" IsDim="0" Name="AT0157"
+			Type="N" />
+		<Attribute Desc="最近12个月信用卡M3的次数" IsDim="0" Name="AT0158"
+			Type="N" />
+		<Attribute Desc="最近12个月信用卡M3+的次数" IsDim="0" Name="AT0159"
+			Type="N" />
+		<Attribute Desc="最近6个月信用卡审批次数" IsDim="0" Name="AT0180" Type="N" />
+		<Attribute Desc="性别" IsDim="1" Name="AT0187" Type="N">
+			<Item Code="1" Desc="男" />
+			<Item Code="2" Desc="女" />
+		</Attribute>
+		<Attribute Desc="产品高限" IsDim="0" Name="AT0189" Type="N" />
+		<Attribute Desc="最近6个月本人查询次数" IsDim="0" Name="AT0268" Type="N" />
+		<Attribute Desc="近6个月信用卡M3的次数" IsDim="0" Name="AT0300" Type="N" />
+		<Attribute Desc="近6个月贷款M3的次数" IsDim="0" Name="AT0301" Type="N" />
+		<Attribute Desc="近6个月贷款M3+的次数" IsDim="0" Name="AT0302" Type="N" />
+		<Attribute Desc="希望申请借款额度(最高)" IsDim="0" Name="AT0306" Type="N" />
+		<Attribute Desc="教育程度" IsDim="0" Name="AT0321" Type="N" />
+		<Attribute Desc="申请客户所属单位员工分类" IsDim="1" Name="AT0326" Type="N">
+			<Item Code="1" Desc="正式员工" />
+			<Item Code="2" Desc="临时工" />
+			<Item Code="3" Desc="短期雇佣人员" />
+		</Attribute>
+		<Attribute Desc="是否是优质单位" IsDim="1" Name="AT0327" Type="N">
+			<Item Code="1" Desc="是" />
+			<Item Code="2" Desc="否" />
+		</Attribute>
+		<Attribute Desc="最近6个月贷款发生60天以上的逾期次数" IsDim="0" Name="AT0329"
+			Type="N" />
+		<Attribute Desc="最近两个月M1次数" IsDim="1" Name="AT0334" Type="N">
+			<Item Code="1" Desc="是" />
+			<Item Code="2" Desc="否" />
+		</Attribute>
+		<Attribute Desc="产品低限" IsDim="0" Name="AT0337" Type="N" />
+		<Attribute Desc="共同居住者是否为其他" IsDim="0" Name="AT0339" Type="N" />
+		<Attribute Desc="最近3个月贷款审批的次数" IsDim="0" Name="AT0340" Type="N" />
+		<Attribute Desc="居住性质" IsDim="0" Name="AT0344" Type="N" />
+		<Attribute Desc="两年内是否出现&quot;呆账&quot;、&quot;止付&quot;、&quot;冻结&quot;"
+			IsDim="1" Name="AT0349" Type="N">
+			<Item Code="1" Desc="是" />
+			<Item Code="2" Desc="否" />
+		</Attribute>
+		<Attribute Desc="是否能完成外访流程" IsDim="1" Name="AT0361" Type="N">
+			<Item Code="1" Desc="是" />
+			<Item Code="2" Desc="否" />
+		</Attribute>
+		<Attribute
+			Desc="两年内出现&quot;呆账&quot;&quot;止付&quot;&quot;冻结&quot;之后新开的贷款或信用卡帐户还款是否正常"
+			IsDim="1" Name="AT0363" Type="N">
+			<Item Code="1" Desc="是" />
+			<Item Code="2" Desc="否" />
+		</Attribute>
+		<Attribute Desc="是否提供工作证" IsDim="1" Name="AT0371" Type="N">
+			<Item Code="1" Desc="是" />
+			<Item Code="2" Desc="否" />
+		</Attribute>
+		<Attribute Desc="直系亲属关系" IsDim="0" Name="AT0378" Type="N" />
+		<Attribute Desc="是否工薪族" IsDim="1" Name="AT0381" Type="N">
+			<Item Code="1" Desc="是" />
+			<Item Code="2" Desc="否" />
+			<Item Code="3" Desc="空" />
+		</Attribute>
+		<Attribute Desc="是否提供专业资格证书" IsDim="1" Name="AT0383" Type="N">
+			<Item Code="1" Desc="是" />
+			<Item Code="2" Desc="否" />
+		</Attribute>
+		<Attribute Desc="借款本金平均值" IsDim="0" Name="AT0391" Type="N" />
+		<Attribute Desc="联系人手机与贷款人城市对应数量" IsDim="0" Name="AT0392"
+			Type="N" />
+		<Attribute Desc="申请人是否无重大疾病" IsDim="1" Name="AT0397" Type="N">
+			<Item Code="1" Desc="是" />
+			<Item Code="2" Desc="否" />
+		</Attribute>
+		<Attribute Desc="每月社保缴费金额" IsDim="0" Name="AT0398" Type="N" />
+		<Attribute Desc="配偶是否签署承诺还款保证书" IsDim="1" Name="AT0399"
+			Type="N">
+			<Item Code="1" Desc="是" />
+			<Item Code="2" Desc="否" />
+		</Attribute>
+		<Attribute Desc="是否提供近3个月或以上的社保记录或者公积金记录" IsDim="1" Name="AT0402"
+			Type="N">
+			<Item Code="1" Desc="是" />
+			<Item Code="2" Desc="否" />
+		</Attribute>
+		<Attribute Desc="个人近6月工资总和" IsDim="0" Name="AT0500" Type="N" />
+		<Attribute Desc="个人近六个月有打卡工资的次数" IsDim="0" Name="AT0501"
+			Type="N" />
+		<Attribute Desc="个人近第一个月进帐金额项(GR_MONTH_INCOME1)" IsDim="0"
+			Name="AT0512" Type="N" />
+		<Attribute Desc="个人近第二个月进帐金额项(GR_MONTH_INCOME2)" IsDim="0"
+			Name="AT0513" Type="N" />
+		<Attribute Desc="个人近第三个月进帐金额项(GR_MONTH_INCOME3)" IsDim="0"
+			Name="AT0514" Type="N" />
+		<Attribute Desc="个人近6个月进帐次数总和" IsDim="0" Name="AT0515" Type="N" />
+		<Attribute Desc="个人月进帐次数项1 AS008(平均次数)" IsDim="0" Name="AT0516"
+			Type="N" />
+		<Attribute Desc="个人近3个月月末余额总和" IsDim="0" Name="AT0517" Type="N" />
+		<Attribute Desc="个人近3个月月末有余额次数" IsDim="0" Name="AT0518"
+			Type="N" />
+		<Attribute Desc="婚姻情况 AS011(SD_C1_MARST)" IsDim="1" Name="AT0521"
+			Type="N">
+			<Item Code="1" Desc="已婚" />
+			<Item Code="2" Desc="未婚" />
+			<Item Code="3" Desc="离异" />
+			<Item Code="4" Desc="其他" />
+		</Attribute>
+		<Attribute Desc="借款本金项1(LOAN_CAPITAL1)" IsDim="0" Name="AT0522"
+			Type="N" />
+		<Attribute Desc="借款本金项1(LOAN_CAPITAL2)" IsDim="0" Name="AT0523"
+			Type="N" />
+		<Attribute Desc="借款本金项1(LOAN_CAPITAL3)" IsDim="0" Name="AT0524"
+			Type="N" />
+		<Attribute Desc="借款本金项1(LOAN_CAPITAL4)" IsDim="0" Name="AT0525"
+			Type="N" />
+		<Attribute Desc="借款本金项1(LOAN_CAPITAL5)" IsDim="0" Name="AT0526"
+			Type="N" />
+		<Attribute Desc="信用卡开户时长项(最终)" IsDim="0" Name="AT0527" Type="N" />
+		<Attribute Desc="信用卡张数项1信用卡总额度 AS019(CARD_AMOUNT)" IsDim="0"
+			Name="AT0529" Type="N" />
+		<Attribute Desc="信用卡张数项1信用卡最高额度 AS019(CARD_HIGH_AMOUNT)"
+			IsDim="0" Name="AT0530" Type="N" />
+	</ExtAttbiutes>
+	<OutputParams>
+		<OutputParam Desc="决策项编码" IsArray="0" IsDim="1"
+			Name="_DECISION_ITEM_CODE" Type="C">
+			<Item Code="RESULT_A" Desc="自动批准" />
+			<Item Code="RESULT_B" Desc="建议批准" />
+			<Item Code="RESULT_C" Desc="建议拒绝" />
+			<Item Code="RESULT_D" Desc="自动拒绝" />
+			<Item Code="RESULT_E" Desc="入组拒绝" />
+			<Item Code="RESULT_F" Desc="人工授信" />
+			<Item Code="RESULT_I" Desc="资料核查" />
+		</OutputParam>
+		<OutputParam Desc="决策项描述" IsArray="0" IsDim="0"
+			Name="_DECISION_ITEM_DESC" Type="C" />
+		<OutputParam Desc="不入组原因代码" IsArray="1" IsDim="1"
+			Name="_NI_REASON_CODE" Type="C">
+			<Item Code="GR0002" Desc="建议通过、人工审核额度及期数" />
+			<Item Code="GR0003" Desc="人工审核额度及期数" />
+			<Item Code="GR0004" Desc="抵押类产品，人工授信并赋予额度。" />
+			<Item Code="II0001" Desc="I类（资料核查）申请件" />
+			<Item Code="JJ0001" Desc="不符合入组条件" />
+			<Item Code="JJ0067" Desc="年龄不符合政策要求" />
+			<Item Code="JJ0098" Desc="直接拒绝" />
+			<Item Code="PO0001" Desc="建议拒绝" />
+			<Item Code="PP0001" Desc="自动批准" />
+			<Item Code="PZ0001" Desc="建议批准" />
+		</OutputParam>
+		<OutputParam Desc="不入组原因描述" IsArray="1" IsDim="0"
+			Name="_NI_REASON_DESC" Type="C" />
+		<OutputParam Desc="原因代码" IsArray="1" IsDim="1" Name="_REASON_CODE"
+			Type="C">
+			<Item Code="GR0002" Desc="建议通过、人工审核额度及期数" />
+			<Item Code="GR0003" Desc="人工审核额度及期数" />
+			<Item Code="GR0004" Desc="抵押类产品，人工授信并赋予额度。" />
+			<Item Code="II0001" Desc="I类（资料核查）申请件" />
+			<Item Code="JJ0001" Desc="不符合入组条件" />
+			<Item Code="JJ0067" Desc="年龄不符合政策要求" />
+			<Item Code="JJ0098" Desc="直接拒绝" />
+			<Item Code="PO0001" Desc="建议拒绝" />
+			<Item Code="PP0001" Desc="自动批准" />
+			<Item Code="PZ0001" Desc="建议批准" />
+		</OutputParam>
+		<OutputParam Desc="原因描述" IsArray="1" IsDim="0" Name="_REASON_DESC"
+			Type="C" />
+		<OutputParam Desc="策略跟踪次尾节点号" IsArray="1" IsDim="0"
+			Name="_STGTRKFID" Type="C" />
+		<OutputParam Desc="跟踪全路径" IsArray="1" IsDim="0"
+			Name="_STGTRKFULLPATH" Type="C" />
+		<OutputParam Desc="策略跟踪节点号" IsArray="1" IsDim="0" Name="_STGTRKID"
+			Type="C" />
+		<OutputParam Desc="不入组条件" IsArray="1" IsDim="0"
+			Name="_STGTRKINCLUSION" Type="C" />
+		<OutputParam Desc="策略跟踪策略名称" IsArray="1" IsDim="0"
+			Name="_STGTRKNAME" Type="C" />
+		<OutputParam Desc="跟踪路径变量" IsArray="1" IsDim="0" Name="_STGTRKPATH"
+			Type="C" />
+		<OutputParam Desc="新欺诈评分" IsArray="0" IsDim="0" Name="ZT0036"
+			Type="N" />
+		<OutputParam Desc="欺诈风险等级" IsArray="0" IsDim="1" Name="ZT0037"
+			Type="N">
+			<Item Code="0" Desc="无评分" />
+			<Item Code="1.1" Desc="A+" />
+			<Item Code="1.2" Desc="A" />
+			<Item Code="1.3" Desc="A-" />
+			<Item Code="2.1" Desc="B+" />
+			<Item Code="2.2" Desc="B-" />
+			<Item Code="3.1" Desc="C+" />
+			<Item Code="3.2" Desc="C-" />
+			<Item Code="4.1" Desc="D+" />
+			<Item Code="4.2" Desc="D" />
+			<Item Code="4.3" Desc="D-" />
+		</OutputParam>
+		<OutputParam Desc="风险等级(流程控制)" IsArray="0" IsDim="1" Name="ZT0039"
+			Type="N">
+			<Item Code="1" Desc="A" />
+			<Item Code="2" Desc="B" />
+			<Item Code="3" Desc="C" />
+			<Item Code="4" Desc="D" />
+		</OutputParam>
+		<OutputParam Desc="月还款能力为月收入倍数" IsArray="0" IsDim="0"
+			Name="ZT0040" Type="N" />
+		<OutputParam Desc="产品高限判断" IsArray="0" IsDim="0" Name="ZT0044"
+			Type="N" />
+		<OutputParam Desc="按月收入计算额度" IsArray="0" IsDim="0" Name="ZT0045"
+			Type="N" />
+		<OutputParam Desc="四舍五入按月收入计算额度" IsArray="0" IsDim="0"
+			Name="ZT0046" Type="N" />
+		<OutputParam Desc="期望申请的最高额度与产品额度上限与月收入计算额度取最小" IsArray="0"
+			IsDim="0" Name="ZT0047" Type="N" />
+		<OutputParam Desc="城市四大等级" IsArray="0" IsDim="1" Name="ZT0049"
+			Type="N">
+			<Item Code="1" Desc="A" />
+			<Item Code="2" Desc="B" />
+			<Item Code="3" Desc="C" />
+			<Item Code="4" Desc="D" />
+		</OutputParam>
+		<OutputParam Desc="贷款期数初值" IsArray="0" IsDim="0" Name="ZT0050"
+			Type="N" />
+		<OutputParam Desc="定价等级" IsArray="0" IsDim="1" Name="ZT0058"
+			Type="N">
+			<Item Code="1" Desc="A" />
+			<Item Code="2" Desc="B" />
+			<Item Code="3" Desc="C" />
+			<Item Code="4" Desc="D" />
+		</OutputParam>
+		<OutputParam Desc="城市收入类别" IsArray="0" IsDim="1" Name="ZT0059"
+			Type="N">
+			<Item Code="0" Desc="其他收入水平" />
+			<Item Code="1" Desc="收入水平1" />
+			<Item Code="2" Desc="收入水平2" />
+			<Item Code="3" Desc="收入水平3" />
+			<Item Code="4" Desc="收入水平4" />
+			<Item Code="5" Desc="收入水平5" />
+		</OutputParam>
+		<OutputParam Desc="A类评级收入预警值" IsArray="0" IsDim="0" Name="ZT0060"
+			Type="N" />
+		<OutputParam Desc="B类评级收入预警值" IsArray="0" IsDim="0" Name="ZT0061"
+			Type="N" />
+		<OutputParam Desc="C类评级收入预警值" IsArray="0" IsDim="0" Name="ZT0062"
+			Type="N" />
+		<OutputParam Desc="D类评级收入预警值" IsArray="0" IsDim="0" Name="ZT0063"
+			Type="N" />
+		<OutputParam Desc="月收入与风险预警值判断" IsArray="0" IsDim="0"
+			Name="ZT0064" Type="N" />
+		<OutputParam Desc="风险等级(评分展现)" IsArray="0" IsDim="1" Name="ZT0065"
+			Type="N">
+			<Item Code="1" Desc="A" />
+			<Item Code="2" Desc="B" />
+			<Item Code="3" Desc="C" />
+			<Item Code="4" Desc="D" />
+		</OutputParam>
+		<OutputParam Desc="额度风险预警阀值" IsArray="0" IsDim="0" Name="ZT0066"
+			Type="N" />
+		<OutputParam Desc="是否触发风险预警规则" IsArray="0" IsDim="1" Name="ZT0067"
+			Type="N">
+			<Item Code="1" Desc="是" />
+			<Item Code="2" Desc="否" />
+		</OutputParam>
+		<OutputParam Desc="各产品系数(P2P工薪)" IsArray="0" IsDim="0"
+			Name="ZT0076" Type="N" />
+		<OutputParam Desc="城市等级系数" IsArray="0" IsDim="0" Name="ZT0077"
+			Type="N" />
+		<OutputParam Desc="百度截取后月收入初始值" IsArray="0" IsDim="0"
+			Name="ZT0078" Type="N" />
+		<OutputParam Desc="月收入是否为空(AT0101)" IsArray="0" IsDim="0"
+			Name="ZT0079" Type="N" />
+		<OutputParam Desc="最近6个月内逾期M2M3是否符合入组" IsArray="0" IsDim="1"
+			Name="ZT0120" Type="N">
+			<Item Code="1" Desc="是" />
+			<Item Code="2" Desc="否" />
+		</OutputParam>
+		<OutputParam Desc="最近12个月内逾期M2M3是否符合入组" IsArray="0" IsDim="1"
+			Name="ZT0121" Type="N">
+			<Item Code="1" Desc="是" />
+			<Item Code="2" Desc="否" />
+		</OutputParam>
+		<OutputParam Desc="近6个月贷款+信用卡M2" IsArray="0" IsDim="0"
+			Name="ZT0123" Type="N" />
+		<OutputParam Desc="红灯(高风险地区)" IsArray="0" IsDim="0" Name="ZT0248"
+			Type="N" />
+		<OutputParam Desc="绿灯(低风险地区)" IsArray="0" IsDim="0" Name="ZT0249"
+			Type="N" />
+		<OutputParam Desc="一般(中风险地区)" IsArray="0" IsDim="0" Name="ZT0250"
+			Type="N" />
+		<OutputParam Desc="最终额度" IsArray="0" IsDim="0" Name="ZT0251"
+			Type="N" />
+		<OutputParam Desc="城市等级分组" IsArray="0" IsDim="1" Name="ZT0361"
+			Type="N">
+			<Item Code="1" Desc="红灯地区" />
+			<Item Code="2" Desc="绿灯地区" />
+			<Item Code="3" Desc="一般地区" />
+		</OutputParam>
+		<OutputParam Desc="最近12个月贷款与信用卡M2逾期次数" IsArray="0" IsDim="0"
+			Name="ZT0369" Type="N" />
+		<OutputParam Desc="近12个月内贷款与信用卡M3次数是否符合要求" IsArray="0"
+			IsDim="1" Name="ZT0370" Type="N">
+			<Item Code="1" Desc="是" />
+			<Item Code="2" Desc="否" />
+		</OutputParam>
+		<OutputParam Desc="新申请评分" IsArray="0" IsDim="0" Name="ZT0380"
+			Type="N" />
+		<OutputParam Desc="申请风险等级" IsArray="0" IsDim="1" Name="ZT0381"
+			Type="N">
+			<Item Code="0" Desc="无评分" />
+			<Item Code="1.1" Desc="A+" />
+			<Item Code="1.2" Desc="A" />
+			<Item Code="1.3" Desc="A-" />
+			<Item Code="2.1" Desc="B+" />
+			<Item Code="2.2" Desc="B-" />
+			<Item Code="3.1" Desc="C+" />
+			<Item Code="3.2" Desc="C-" />
+			<Item Code="4.1" Desc="D+" />
+			<Item Code="4.2" Desc="D" />
+			<Item Code="4.3" Desc="D-" />
+		</OutputParam>
+		<OutputParam Desc="每月估算收入(菁英)" IsArray="0" IsDim="0" Name="ZT0403"
+			Type="N" />
+		<OutputParam Desc="收入取值(百度)最终" IsArray="0" IsDim="0" Name="ZT0404"
+			Type="N" />
+		<OutputParam Desc="3个月贷款审批次数项1 AS001(取小)" IsArray="0"
+			IsDim="0" Name="ZT0500" Type="N" />
+		<OutputParam Desc="3个月贷款审批次数项1最终 AS001(1/3次方)" IsArray="0"
+			IsDim="0" Name="ZT0502" Type="N" />
+		<OutputParam Desc="3个月贷款审批次数项2 AS002_TMP(MAX)" IsArray="0"
+			IsDim="0" Name="ZT0503" Type="N" />
+		<OutputParam Desc="3个月贷款审批次数项2最终 AS002 IN" IsArray="0"
+			IsDim="0" Name="ZT0504" Type="N" />
+		<OutputParam Desc="3个月信用卡审批次数项 最终 AS003 MIN" IsArray="0"
+			IsDim="0" Name="ZT0506" Type="N" />
+		<OutputParam Desc="6个月个人查询次数项 最终 AS004(MIN)" IsArray="0"
+			IsDim="0" Name="ZT0508" Type="N" />
+		<OutputParam Desc="房产证项 最终 AS005" IsArray="0" IsDim="0"
+			Name="ZT0509" Type="N" />
+		<OutputParam Desc="个人工资项1 AS006(ZT0510与86439比较大小)"
+			IsArray="0" IsDim="0" Name="ZT0512" Type="N" />
+		<OutputParam Desc="个人工资项1 最终 AS006(ZT0512平方)" IsArray="0"
+			IsDim="0" Name="ZT0513" Type="N" />
+		<OutputParam Desc="个人工资项2 AS007(AVG)" IsArray="0" IsDim="0"
+			Name="ZT0514" Type="N" />
+		<OutputParam Desc="个人工资项2 最终 AS007(ZT0514与14406比较大小)"
+			IsArray="0" IsDim="0" Name="ZT0515" Type="N" />
+		<OutputParam Desc="个人月进帐次数项1 AS008" IsArray="0" IsDim="0"
+			Name="ZT0516" Type="N" />
+		<OutputParam Desc="个人月进账（2次方）AS008最终" IsArray="0" IsDim="0"
+			Name="ZT0517" Type="N" />
+		<OutputParam Desc="个人月进帐金额项2 AS009(MAX最终)" IsArray="0"
+			IsDim="0" Name="ZT0520" Type="N" />
+		<OutputParam Desc="个人月末余额项 AS010(平均值)" IsArray="0" IsDim="0"
+			Name="ZT0525" Type="N" />
+		<OutputParam Desc="个人月末余额项最终 AS010(1/3次方)" IsArray="0"
+			IsDim="0" Name="ZT0526" Type="N" />
+		<OutputParam Desc="婚姻项最终 AS011" IsArray="0" IsDim="0"
+			Name="ZT0527" Type="N" />
+		<OutputParam Desc="建筑面积最终 AS012" IsArray="0" IsDim="0"
+			Name="ZT0528" Type="N" />
+		<OutputParam Desc="教育背景项最终 AS013" IsArray="0" IsDim="0"
+			Name="ZT0529" Type="N" />
+		<OutputParam Desc="借款本金项1最终 AS014(ZT0534与500000比较大小)"
+			IsArray="0" IsDim="0" Name="ZT0536" Type="N" />
+		<OutputParam Desc="借款本金项2最终 AS015(AS014平方)" IsArray="0"
+			IsDim="0" Name="ZT0537" Type="N" />
+		<OutputParam Desc="年龄项1最终 AS016" IsArray="0" IsDim="0"
+			Name="ZT0538" Type="N" />
+		<OutputParam Desc="年龄项1最终 AS017(年龄平方)" IsArray="0" IsDim="0"
+			Name="ZT0539" Type="N" />
+		<OutputParam Desc="信用卡开户时长项最终 AS018" IsArray="0" IsDim="0"
+			Name="ZT0540" Type="N" />
+		<OutputParam Desc="信用卡张数项1 AS019(去空)" IsArray="0" IsDim="0"
+			Name="ZT0541" Type="N" />
+		<OutputParam Desc="信用卡张数项1 AS019范围取值" IsArray="0" IsDim="0"
+			Name="ZT0542" Type="N" />
+		<OutputParam Desc="信用卡张数项1最终 AS019(LN)" IsArray="0" IsDim="0"
+			Name="ZT0544" Type="N" />
+		<OutputParam Desc="信用卡张数项2最终 AS020(平方)" IsArray="0" IsDim="0"
+			Name="ZT0545" Type="N" />
+		<OutputParam Desc="性别项最终 AS021" IsArray="0" IsDim="0"
+			Name="ZT0546" Type="N" />
+		<OutputParam Desc="月收入项最终 AS022(平方)" IsArray="0" IsDim="0"
+			Name="ZT0548" Type="N" />
+		<OutputParam Desc="申请评分公式Asxbeta " IsArray="0" IsDim="0"
+			Name="ZT0580" Type="N" />
+		<OutputParam Desc="申请评分公式300-(40/log(2))*Asxbeta" IsArray="0"
+			IsDim="0" Name="ZT0590" Type="N" />
+		<OutputParam Desc="申请评分公式ROUND" IsArray="0" IsDim="0"
+			Name="ZT0591" Type="N" />
+		<OutputParam Desc="申请评分公式MIN" IsArray="0" IsDim="0" Name="ZT0592"
+			Type="N" />
+		<OutputParam Desc="申请评分公式最终AS(MAX)" IsArray="0" IsDim="0"
+			Name="ZT0593" Type="N" />
+		<OutputParam Desc="性别项 FS001最终" IsArray="0" IsDim="0"
+			Name="ZT0600" Type="N" />
+		<OutputParam Desc="3个月个人查询次数项 FS002(处理缺失)" IsArray="0"
+			IsDim="0" Name="ZT0601" Type="N" />
+		<OutputParam Desc="3个月个人查询次数项最终 FS002(二分之一次方)" IsArray="0"
+			IsDim="0" Name="ZT0604" Type="N" />
+		<OutputParam Desc="客户类型项最终 FS003" IsArray="0" IsDim="0"
+			Name="ZT0605" Type="N" />
+		<OutputParam Desc="借款本金项最终 FS004(ZT0605与80000比较大小)"
+			IsArray="0" IsDim="0" Name="ZT0607" Type="N" />
+		<OutputParam Desc="身份证年龄项最终 FS005" IsArray="0" IsDim="0"
+			Name="ZT0608" Type="N" />
+		<OutputParam Desc="3个月贷款审批次数项最终 FS006(平方)" IsArray="0"
+			IsDim="0" Name="ZT0612" Type="N" />
+		<OutputParam Desc="3个月信用卡审批次数最终 FS007(平方)" IsArray="0"
+			IsDim="0" Name="ZT0616" Type="N" />
+		<OutputParam Desc="联系人手机城市一致项最终 FS008" IsArray="0" IsDim="0"
+			Name="ZT0617" Type="N" />
+		<OutputParam Desc="居住性质项最终 FS009" IsArray="0" IsDim="0"
+			Name="ZT0618" Type="N" />
+		<OutputParam Desc="家庭联系人1项最终 FS010" IsArray="0" IsDim="0"
+			Name="ZT0619" Type="N" />
+		<OutputParam Desc="共同居住者最终 FS011" IsArray="0" IsDim="0"
+			Name="ZT0620" Type="N" />
+		<OutputParam Desc="欺诈评分公式Fsxbeta" IsArray="0" IsDim="0"
+			Name="ZT0680" Type="N" />
+		<OutputParam Desc="欺诈评分公式FS(MAX)" IsArray="0" IsDim="0"
+			Name="ZT0689" Type="N" />
+		<OutputParam Desc="欺诈评分公式(300-(40/log(2))*xbeta_frau)"
+			IsArray="0" IsDim="0" Name="ZT0690" Type="N" />
+		<OutputParam Desc="欺诈评分公式FS_TMP1(ROUND)" IsArray="0"
+			IsDim="0" Name="ZT0691" Type="N" />
+		<OutputParam Desc="欺诈评分公式FS_TMP2" IsArray="0" IsDim="0"
+			Name="ZT0692" Type="N" />
+		<OutputParam Desc="欺诈评分公式FS(MIN)" IsArray="0" IsDim="0"
+			Name="ZT0693" Type="N" />
+		<OutputParam Desc="欺诈评分公式FS最终(ROUND)" IsArray="0" IsDim="0"
+			Name="ZT0694" Type="N" />
+		<OutputParam Desc="3个月个人查询次数项 FS002(MAX)" IsArray="0"
+			IsDim="0" Name="ZT0603" Type="N" />
+	</OutputParams>
+	<CDSScript><![CDATA[package cn.com.cfchina.cdse;
+import java.util.*;
+public class CDSEnginer extends CDSEmluatorBase implements CDSEmluatorInterface { 
+//$BEGIN$
+//$BEGIN_DEFINE$
+Map diMap = new Hashtable();
+Map rcMap = new Hashtable();
+StringBuffer _T_PATH=new StringBuffer();
+StringBuffer _T_FPATH=new StringBuffer();
+boolean initMapFlag = false;
+int _SupplIndex=0;
+//------系统变量声明------
+String _DECISION_ITEM_CODE="";
+String _DECISION_ITEM_DESC="";
+String[] _NI_REASON_CODE=new String[0];
+String[] _NI_REASON_DESC=new String[0];
+String[] _REASON_CODE=new String[0];
+String[] _REASON_DESC=new String[0];
+String[] _STGTRKFID=new String[0];
+String[] _STGTRKFULLPATH=new String[0];
+String[] _STGTRKID=new String[0];
+String[] _STGTRKINCLUSION=new String[0];
+String[] _STGTRKNAME=new String[0];
+String[] _STGTRKPATH=new String[0];
+//------ 决策项变量声明------
+double _USER_ACTION=0.0;
+//------外部变量、内部变量声明------
+double AT0001=0.0;
+double AT0002=0.0;
+double AT0003=0.0;
+double AT0004=0.0;
+double AT0005=0.0;
+double AT0006=0.0;
+double AT0007=0.0;
+double AT0008=0.0;
+double AT0009=0.0;
+double AT0010=0.0;
+double AT0011=0.0;
+double AT0012=0.0;
+double AT0013=0.0;
+double AT0014=0.0;
+double AT0015=0.0;
+double AT0016=0.0;
+double AT0017=0.0;
+double AT0018=0.0;
+double AT0019=0.0;
+double AT0020=0.0;
+double AT0021=0.0;
+double AT0022=0.0;
+double AT0023=0.0;
+double AT0024=0.0;
+double AT0025=0.0;
+double AT0026=0.0;
+double AT0027=0.0;
+double AT0028=0.0;
+double AT0029=0.0;
+double AT0030=0.0;
+double AT0031=0.0;
+double AT0032=0.0;
+double AT0033=0.0;
+double AT0034=0.0;
+double AT0035=0.0;
+double AT0036=0.0;
+double AT0037=0.0;
+double AT0038=0.0;
+double AT0039=0.0;
+double AT0040=0.0;
+double AT0041=0.0;
+double AT0042=0.0;
+double AT0043=0.0;
+double AT0044=0.0;
+double AT0045=0.0;
+double AT0046=0.0;
+double AT0047=0.0;
+double AT0048=0.0;
+double AT0049=0.0;
+double AT0050=0.0;
+double AT0051=0.0;
+double AT0052=0.0;
+double AT0053=0.0;
+double AT0054=0.0;
+double AT0055=0.0;
+double AT0056=0.0;
+double AT0057=0.0;
+double AT0058=0.0;
+double AT0059=0.0;
+double AT0060=0.0;
+double AT0061=0.0;
+double AT0062=0.0;
+double AT0063=0.0;
+double AT0064=0.0;
+double AT0065=0.0;
+double AT0066=0.0;
+double AT0067=0.0;
+double AT0068=0.0;
+double AT0069=0.0;
+double AT0070=0.0;
+double AT0071=0.0;
+double AT0072=0.0;
+double AT0073=0.0;
+double AT0074=0.0;
+double AT0075=0.0;
+double AT0076=0.0;
+double AT0077=0.0;
+double AT0078=0.0;
+double AT0079=0.0;
+double AT0080=0.0;
+double AT0081=0.0;
+double AT0082=0.0;
+double AT0083=0.0;
+double AT0084=0.0;
+double AT0085=0.0;
+double AT0086=0.0;
+double AT0087=0.0;
+double AT0088=0.0;
+double AT0089=0.0;
+double AT0090=0.0;
+double AT0091=0.0;
+double AT0092=0.0;
+double AT0093=0.0;
+double AT0094=0.0;
+double AT0095=0.0;
+double AT0096=0.0;
+double AT0097=0.0;
+double AT0098=0.0;
+double AT0099=0.0;
+double AT0100=0.0;
+double AT0101=0.0;
+double AT0102=0.0;
+double AT0105=0.0;
+double AT0106=0.0;
+double AT0107=0.0;
+double AT0108=0.0;
+double AT0109=0.0;
+double AT0110=0.0;
+double AT0111=0.0;
+double AT0112=0.0;
+double AT0113=0.0;
+double AT0114=0.0;
+double AT0115=0.0;
+double AT0116=0.0;
+double AT0117=0.0;
+double AT0118=0.0;
+double AT0119=0.0;
+double AT0120=0.0;
+double AT0121=0.0;
+double AT0122=0.0;
+String AT0123="";
+double AT0124=0.0;
+double AT0125=0.0;
+double AT0126=0.0;
+double AT0127=0.0;
+double AT0129=0.0;
+double AT0130=0.0;
+double AT0131=0.0;
+double AT0132=0.0;
+double AT0133=0.0;
+double AT0134=0.0;
+double AT0135=0.0;
+double AT0136=0.0;
+double AT0137=0.0;
+double AT0138=0.0;
+double AT0139=0.0;
+double AT0140=0.0;
+double AT0141=0.0;
+double AT0142=0.0;
+double AT0143=0.0;
+double AT0144=0.0;
+double AT0145=0.0;
+double AT0146=0.0;
+double AT0147=0.0;
+double AT0148=0.0;
+double AT0149=0.0;
+double AT0150=0.0;
+double AT0151=0.0;
+double AT0152=0.0;
+double AT0153=0.0;
+double AT0154=0.0;
+double AT0155=0.0;
+double AT0156=0.0;
+double AT0157=0.0;
+double AT0158=0.0;
+double AT0159=0.0;
+double AT0160=0.0;
+double AT0161=0.0;
+double AT0162=0.0;
+double AT0163=0.0;
+double AT0164=0.0;
+double AT0165=0.0;
+double AT0166=0.0;
+double AT0167=0.0;
+double AT0168=0.0;
+double AT0169=0.0;
+double AT0170=0.0;
+double AT0171=0.0;
+String AT0172="";
+String AT0173="";
+double AT0174=0.0;
+double AT0175=0.0;
+double AT0176=0.0;
+double AT0177=0.0;
+double AT0178=0.0;
+double AT0179=0.0;
+double AT0180=0.0;
+double AT0181=0.0;
+double AT0182=0.0;
+double AT0183=0.0;
+double AT0184=0.0;
+double AT0185=0.0;
+double AT0186=0.0;
+double AT0187=0.0;
+double AT0188=0.0;
+double AT0189=0.0;
+double AT0190=0.0;
+String AT0193="";
+String AT0194="";
+String AT0195="";
+String AT0196="";
+double AT0197=0.0;
+double AT0198=0.0;
+double AT0199=0.0;
+double AT0200=0.0;
+double AT0201=0.0;
+double AT0202=0.0;
+double AT0203=0.0;
+double AT0204=0.0;
+double AT0205=0.0;
+double AT0206=0.0;
+double AT0207=0.0;
+double AT0208=0.0;
+double AT0209=0.0;
+double AT0210=0.0;
+double AT0211=0.0;
+double AT0212=0.0;
+double AT0213=0.0;
+double AT0214=0.0;
+double AT0215=0.0;
+double AT0216=0.0;
+double AT0217=0.0;
+double AT0218=0.0;
+double AT0220=0.0;
+double AT0221=0.0;
+double AT0222=0.0;
+double AT0225=0.0;
+double AT0226=0.0;
+double AT0227=0.0;
+double AT0228=0.0;
+double AT0230=0.0;
+double AT0231=0.0;
+double AT0232=0.0;
+double AT0235=0.0;
+double AT0236=0.0;
+double AT0239=0.0;
+double AT0240=0.0;
+double AT0245=0.0;
+String AT0246="";
+double AT0247=0.0;
+double AT0250=0.0;
+double AT0251=0.0;
+double AT0252=0.0;
+double AT0253=0.0;
+double AT0255=0.0;
+double AT0256=0.0;
+double AT0257=0.0;
+double AT0258=0.0;
+double AT0259=0.0;
+double AT0263=0.0;
+double AT0268=0.0;
+double AT0269=0.0;
+double AT0270=0.0;
+double AT0271=0.0;
+double AT0273=0.0;
+double AT0274=0.0;
+double AT0275=0.0;
+double AT0276=0.0;
+double AT0277=0.0;
+double AT0278=0.0;
+double AT0279=0.0;
+double AT0280=0.0;
+double AT0281=0.0;
+double AT0282=0.0;
+double AT0283=0.0;
+double AT0284=0.0;
+double AT0286=0.0;
+double AT0287=0.0;
+double AT0288=0.0;
+double AT0289=0.0;
+double AT0290=0.0;
+double AT0291=0.0;
+double AT0292=0.0;
+double AT0293=0.0;
+double AT0294=0.0;
+double AT0297=0.0;
+double AT0298=0.0;
+double AT0299=0.0;
+double AT0300=0.0;
+double AT0301=0.0;
+double AT0302=0.0;
+double AT0303=0.0;
+double AT0304=0.0;
+double AT0305=0.0;
+double AT0306=0.0;
+double AT0307=0.0;
+double AT0308=0.0;
+double AT0309=0.0;
+double AT0310=0.0;
+double AT0311=0.0;
+double AT0312=0.0;
+double AT0313=0.0;
+double AT0314=0.0;
+double AT0315=0.0;
+double AT0316=0.0;
+double AT0317=0.0;
+double AT0318=0.0;
+double AT0319=0.0;
+double AT0320=0.0;
+double AT0321=0.0;
+double AT0322=0.0;
+double AT0323=0.0;
+double AT0324=0.0;
+double AT0325=0.0;
+double AT0326=0.0;
+double AT0327=0.0;
+double AT0328=0.0;
+double AT0329=0.0;
+double AT0330=0.0;
+double AT0331=0.0;
+double AT0332=0.0;
+double AT0333=0.0;
+double AT0334=0.0;
+double AT0335=0.0;
+double AT0336=0.0;
+double AT0337=0.0;
+double AT0338=0.0;
+double AT0339=0.0;
+double AT0340=0.0;
+double AT0341=0.0;
+double AT0342=0.0;
+double AT0343=0.0;
+double AT0344=0.0;
+double AT0345=0.0;
+double AT0346=0.0;
+double AT0347=0.0;
+double AT0348=0.0;
+double AT0349=0.0;
+double AT0350=0.0;
+String AT0351="";
+double AT0354=0.0;
+double AT0356=0.0;
+double AT0357=0.0;
+double AT0358=0.0;
+double AT0359=0.0;
+double AT0360=0.0;
+double AT0361=0.0;
+double AT0362=0.0;
+double AT0363=0.0;
+double AT0364=0.0;
+double AT0365=0.0;
+double AT0366=0.0;
+double AT0367=0.0;
+double AT0368=0.0;
+double AT0369=0.0;
+double AT0370=0.0;
+double AT0371=0.0;
+double AT0372=0.0;
+double AT0373=0.0;
+double AT0374=0.0;
+double AT0375=0.0;
+double AT0376=0.0;
+double AT0377=0.0;
+double AT0378=0.0;
+double AT0380=0.0;
+double AT0381=0.0;
+double AT0382=0.0;
+double AT0383=0.0;
+double AT0384=0.0;
+double AT0385=0.0;
+double AT0386=0.0;
+double AT0389=0.0;
+double AT0390=0.0;
+double AT0391=0.0;
+double AT0392=0.0;
+double AT0393=0.0;
+double AT0394=0.0;
+double AT0395=0.0;
+double AT0397=0.0;
+double AT0398=0.0;
+double AT0399=0.0;
+double AT0400=0.0;
+double AT0402=0.0;
+double AT0500=0.0;
+double AT0501=0.0;
+double AT0512=0.0;
+double AT0513=0.0;
+double AT0514=0.0;
+double AT0515=0.0;
+double AT0516=0.0;
+double AT0517=0.0;
+double AT0518=0.0;
+double AT0519=0.0;
+double AT0520=0.0;
+double AT0521=0.0;
+double AT0522=0.0;
+double AT0523=0.0;
+double AT0524=0.0;
+double AT0525=0.0;
+double AT0526=0.0;
+double AT0527=0.0;
+double AT0528=0.0;
+double AT0529=0.0;
+double AT0530=0.0;
+double AT0600=0.0;
+double AT0601=0.0;
+double AT0602=0.0;
+double AT0603=0.0;
+double AT0604=0.0;
+double ZT0036=0.0;
+double ZT0037=0.0;
+double ZT0039=0.0;
+double ZT0040=0.0;
+double ZT0044=0.0;
+double ZT0045=0.0;
+double ZT0046=0.0;
+double ZT0047=0.0;
+double ZT0049=0.0;
+double ZT0050=0.0;
+double ZT0058=0.0;
+double ZT0059=0.0;
+double ZT0060=0.0;
+double ZT0061=0.0;
+double ZT0062=0.0;
+double ZT0063=0.0;
+double ZT0064=0.0;
+double ZT0065=0.0;
+double ZT0066=0.0;
+double ZT0067=0.0;
+double ZT0076=0.0;
+double ZT0077=0.0;
+double ZT0078=0.0;
+double ZT0079=0.0;
+double ZT0120=0.0;
+double ZT0121=0.0;
+double ZT0123=0.0;
+double ZT0248=0.0;
+double ZT0249=0.0;
+double ZT0250=0.0;
+double ZT0251=0.0;
+double ZT0361=0.0;
+double ZT0369=0.0;
+double ZT0370=0.0;
+double ZT0380=0.0;
+double ZT0381=0.0;
+double ZT0403=0.0;
+double ZT0404=0.0;
+double ZT0500=0.0;
+double ZT0502=0.0;
+double ZT0503=0.0;
+double ZT0504=0.0;
+double ZT0506=0.0;
+double ZT0508=0.0;
+double ZT0509=0.0;
+double ZT0512=0.0;
+double ZT0513=0.0;
+double ZT0514=0.0;
+double ZT0515=0.0;
+double ZT0516=0.0;
+double ZT0517=0.0;
+double ZT0520=0.0;
+double ZT0525=0.0;
+double ZT0526=0.0;
+double ZT0527=0.0;
+double ZT0528=0.0;
+double ZT0529=0.0;
+double ZT0536=0.0;
+double ZT0537=0.0;
+double ZT0538=0.0;
+double ZT0539=0.0;
+double ZT0540=0.0;
+double ZT0541=0.0;
+double ZT0542=0.0;
+double ZT0544=0.0;
+double ZT0545=0.0;
+double ZT0546=0.0;
+double ZT0548=0.0;
+double ZT0580=0.0;
+double ZT0590=0.0;
+double ZT0591=0.0;
+double ZT0592=0.0;
+double ZT0593=0.0;
+double ZT0600=0.0;
+double ZT0601=0.0;
+double ZT0603=0.0;
+double ZT0604=0.0;
+double ZT0605=0.0;
+double ZT0607=0.0;
+double ZT0608=0.0;
+double ZT0612=0.0;
+double ZT0616=0.0;
+double ZT0617=0.0;
+double ZT0618=0.0;
+double ZT0619=0.0;
+double ZT0620=0.0;
+double ZT0680=0.0;
+double ZT0689=0.0;
+double ZT0690=0.0;
+double ZT0691=0.0;
+double ZT0692=0.0;
+double ZT0693=0.0;
+double ZT0694=0.0;
+//------产品线变量声明------
+//------客户分类变量声明------
+//------评分卡变量声明------
+
+//$END_DEFINE$
+//$BEGIN_FUNCTION$
+private void initAttritute(){
+_SupplIndex=0;
+//------系统变量初始化------
+_DECISION_ITEM_CODE="";
+_DECISION_ITEM_DESC="";
+_NI_REASON_CODE=new String[0];
+_NI_REASON_DESC=new String[0];
+_REASON_CODE=new String[0];
+_REASON_DESC=new String[0];
+_STGTRKFID=new String[0];
+_STGTRKFULLPATH=new String[0];
+_STGTRKID=new String[0];
+_STGTRKINCLUSION=new String[0];
+_STGTRKNAME=new String[0];
+_STGTRKPATH=new String[0];
+//------ 决策项变量初始化------
+_USER_ACTION=0.0;
+//------外部变量、内部变量初始化------
+AT0001=0.0;
+AT0002=0.0;
+AT0003=0.0;
+AT0004=0.0;
+AT0005=0.0;
+AT0006=0.0;
+AT0007=0.0;
+AT0008=0.0;
+AT0009=0.0;
+AT0010=0.0;
+AT0011=0.0;
+AT0012=0.0;
+AT0013=0.0;
+AT0014=0.0;
+AT0015=0.0;
+AT0016=0.0;
+AT0017=0.0;
+AT0018=0.0;
+AT0019=0.0;
+AT0020=0.0;
+AT0021=0.0;
+AT0022=0.0;
+AT0023=0.0;
+AT0024=0.0;
+AT0025=0.0;
+AT0026=0.0;
+AT0027=0.0;
+AT0028=0.0;
+AT0029=0.0;
+AT0030=0.0;
+AT0031=0.0;
+AT0032=0.0;
+AT0033=0.0;
+AT0034=0.0;
+AT0035=0.0;
+AT0036=0.0;
+AT0037=0.0;
+AT0038=0.0;
+AT0039=0.0;
+AT0040=0.0;
+AT0041=0.0;
+AT0042=0.0;
+AT0043=0.0;
+AT0044=0.0;
+AT0045=0.0;
+AT0046=0.0;
+AT0047=0.0;
+AT0048=0.0;
+AT0049=0.0;
+AT0050=0.0;
+AT0051=0.0;
+AT0052=0.0;
+AT0053=0.0;
+AT0054=0.0;
+AT0055=0.0;
+AT0056=0.0;
+AT0057=0.0;
+AT0058=0.0;
+AT0059=0.0;
+AT0060=0.0;
+AT0061=0.0;
+AT0062=0.0;
+AT0063=0.0;
+AT0064=0.0;
+AT0065=0.0;
+AT0066=0.0;
+AT0067=0.0;
+AT0068=0.0;
+AT0069=0.0;
+AT0070=0.0;
+AT0071=0.0;
+AT0072=0.0;
+AT0073=0.0;
+AT0074=0.0;
+AT0075=0.0;
+AT0076=0.0;
+AT0077=0.0;
+AT0078=0.0;
+AT0079=0.0;
+AT0080=0.0;
+AT0081=0.0;
+AT0082=0.0;
+AT0083=0.0;
+AT0084=0.0;
+AT0085=0.0;
+AT0086=0.0;
+AT0087=0.0;
+AT0088=0.0;
+AT0089=0.0;
+AT0090=0.0;
+AT0091=0.0;
+AT0092=0.0;
+AT0093=0.0;
+AT0094=0.0;
+AT0095=0.0;
+AT0096=0.0;
+AT0097=0.0;
+AT0098=0.0;
+AT0099=0.0;
+AT0100=0.0;
+AT0101=0.0;
+AT0102=0.0;
+AT0105=0.0;
+AT0106=0.0;
+AT0107=0.0;
+AT0108=0.0;
+AT0109=0.0;
+AT0110=0.0;
+AT0111=0.0;
+AT0112=0.0;
+AT0113=0.0;
+AT0114=0.0;
+AT0115=0.0;
+AT0116=0.0;
+AT0117=0.0;
+AT0118=0.0;
+AT0119=0.0;
+AT0120=0.0;
+AT0121=0.0;
+AT0122=0.0;
+AT0123="";
+AT0124=0.0;
+AT0125=0.0;
+AT0126=0.0;
+AT0127=0.0;
+AT0129=0.0;
+AT0130=0.0;
+AT0131=0.0;
+AT0132=0.0;
+AT0133=0.0;
+AT0134=0.0;
+AT0135=0.0;
+AT0136=0.0;
+AT0137=0.0;
+AT0138=0.0;
+AT0139=0.0;
+AT0140=0.0;
+AT0141=0.0;
+AT0142=0.0;
+AT0143=0.0;
+AT0144=0.0;
+AT0145=0.0;
+AT0146=0.0;
+AT0147=0.0;
+AT0148=0.0;
+AT0149=0.0;
+AT0150=0.0;
+AT0151=0.0;
+AT0152=0.0;
+AT0153=0.0;
+AT0154=0.0;
+AT0155=0.0;
+AT0156=0.0;
+AT0157=0.0;
+AT0158=0.0;
+AT0159=0.0;
+AT0160=0.0;
+AT0161=0.0;
+AT0162=0.0;
+AT0163=0.0;
+AT0164=0.0;
+AT0165=0.0;
+AT0166=0.0;
+AT0167=0.0;
+AT0168=0.0;
+AT0169=0.0;
+AT0170=0.0;
+AT0171=0.0;
+AT0172="";
+AT0173="";
+AT0174=0.0;
+AT0175=0.0;
+AT0176=0.0;
+AT0177=0.0;
+AT0178=0.0;
+AT0179=0.0;
+AT0180=0.0;
+AT0181=0.0;
+AT0182=0.0;
+AT0183=0.0;
+AT0184=0.0;
+AT0185=0.0;
+AT0186=0.0;
+AT0187=0.0;
+AT0188=0.0;
+AT0189=0.0;
+AT0190=0.0;
+AT0193="";
+AT0194="";
+AT0195="";
+AT0196="";
+AT0197=0.0;
+AT0198=0.0;
+AT0199=0.0;
+AT0200=0.0;
+AT0201=0.0;
+AT0202=0.0;
+AT0203=0.0;
+AT0204=0.0;
+AT0205=0.0;
+AT0206=0.0;
+AT0207=0.0;
+AT0208=0.0;
+AT0209=0.0;
+AT0210=0.0;
+AT0211=0.0;
+AT0212=0.0;
+AT0213=0.0;
+AT0214=0.0;
+AT0215=0.0;
+AT0216=0.0;
+AT0217=0.0;
+AT0218=0.0;
+AT0220=0.0;
+AT0221=0.0;
+AT0222=0.0;
+AT0225=0.0;
+AT0226=0.0;
+AT0227=0.0;
+AT0228=0.0;
+AT0230=0.0;
+AT0231=0.0;
+AT0232=0.0;
+AT0235=0.0;
+AT0236=0.0;
+AT0239=0.0;
+AT0240=0.0;
+AT0245=0.0;
+AT0246="";
+AT0247=0.0;
+AT0250=0.0;
+AT0251=0.0;
+AT0252=0.0;
+AT0253=0.0;
+AT0255=0.0;
+AT0256=0.0;
+AT0257=0.0;
+AT0258=0.0;
+AT0259=0.0;
+AT0263=0.0;
+AT0268=0.0;
+AT0269=0.0;
+AT0270=0.0;
+AT0271=0.0;
+AT0273=0.0;
+AT0274=0.0;
+AT0275=0.0;
+AT0276=0.0;
+AT0277=0.0;
+AT0278=0.0;
+AT0279=0.0;
+AT0280=0.0;
+AT0281=0.0;
+AT0282=0.0;
+AT0283=0.0;
+AT0284=0.0;
+AT0286=0.0;
+AT0287=0.0;
+AT0288=0.0;
+AT0289=0.0;
+AT0290=0.0;
+AT0291=0.0;
+AT0292=0.0;
+AT0293=0.0;
+AT0294=0.0;
+AT0297=0.0;
+AT0298=0.0;
+AT0299=0.0;
+AT0300=0.0;
+AT0301=0.0;
+AT0302=0.0;
+AT0303=0.0;
+AT0304=0.0;
+AT0305=0.0;
+AT0306=0.0;
+AT0307=0.0;
+AT0308=0.0;
+AT0309=0.0;
+AT0310=0.0;
+AT0311=0.0;
+AT0312=0.0;
+AT0313=0.0;
+AT0314=0.0;
+AT0315=0.0;
+AT0316=0.0;
+AT0317=0.0;
+AT0318=0.0;
+AT0319=0.0;
+AT0320=0.0;
+AT0321=0.0;
+AT0322=0.0;
+AT0323=0.0;
+AT0324=0.0;
+AT0325=0.0;
+AT0326=0.0;
+AT0327=0.0;
+AT0328=0.0;
+AT0329=0.0;
+AT0330=0.0;
+AT0331=0.0;
+AT0332=0.0;
+AT0333=0.0;
+AT0334=0.0;
+AT0335=0.0;
+AT0336=0.0;
+AT0337=0.0;
+AT0338=0.0;
+AT0339=0.0;
+AT0340=0.0;
+AT0341=0.0;
+AT0342=0.0;
+AT0343=0.0;
+AT0344=0.0;
+AT0345=0.0;
+AT0346=0.0;
+AT0347=0.0;
+AT0348=0.0;
+AT0349=0.0;
+AT0350=0.0;
+AT0351="";
+AT0354=0.0;
+AT0356=0.0;
+AT0357=0.0;
+AT0358=0.0;
+AT0359=0.0;
+AT0360=0.0;
+AT0361=0.0;
+AT0362=0.0;
+AT0363=0.0;
+AT0364=0.0;
+AT0365=0.0;
+AT0366=0.0;
+AT0367=0.0;
+AT0368=0.0;
+AT0369=0.0;
+AT0370=0.0;
+AT0371=0.0;
+AT0372=0.0;
+AT0373=0.0;
+AT0374=0.0;
+AT0375=0.0;
+AT0376=0.0;
+AT0377=0.0;
+AT0378=0.0;
+AT0380=0.0;
+AT0381=0.0;
+AT0382=0.0;
+AT0383=0.0;
+AT0384=0.0;
+AT0385=0.0;
+AT0386=0.0;
+AT0389=0.0;
+AT0390=0.0;
+AT0391=0.0;
+AT0392=0.0;
+AT0393=0.0;
+AT0394=0.0;
+AT0395=0.0;
+AT0397=0.0;
+AT0398=0.0;
+AT0399=0.0;
+AT0400=0.0;
+AT0402=0.0;
+AT0500=0.0;
+AT0501=0.0;
+AT0512=0.0;
+AT0513=0.0;
+AT0514=0.0;
+AT0515=0.0;
+AT0516=0.0;
+AT0517=0.0;
+AT0518=0.0;
+AT0519=0.0;
+AT0520=0.0;
+AT0521=0.0;
+AT0522=0.0;
+AT0523=0.0;
+AT0524=0.0;
+AT0525=0.0;
+AT0526=0.0;
+AT0527=0.0;
+AT0528=0.0;
+AT0529=0.0;
+AT0530=0.0;
+AT0600=0.0;
+AT0601=0.0;
+AT0602=0.0;
+AT0603=0.0;
+AT0604=0.0;
+ZT0036=0.0;
+ZT0037=0.0;
+ZT0039=0.0;
+ZT0040=0.0;
+ZT0044=0.0;
+ZT0045=0.0;
+ZT0046=0.0;
+ZT0047=0.0;
+ZT0049=0.0;
+ZT0050=0.0;
+ZT0058=0.0;
+ZT0059=0.0;
+ZT0060=0.0;
+ZT0061=0.0;
+ZT0062=0.0;
+ZT0063=0.0;
+ZT0064=0.0;
+ZT0065=0.0;
+ZT0066=0.0;
+ZT0067=0.0;
+ZT0076=0.0;
+ZT0077=0.0;
+ZT0078=0.0;
+ZT0079=0.0;
+ZT0120=0.0;
+ZT0121=0.0;
+ZT0123=0.0;
+ZT0248=0.0;
+ZT0249=0.0;
+ZT0250=0.0;
+ZT0251=0.0;
+ZT0361=0.0;
+ZT0369=0.0;
+ZT0370=0.0;
+ZT0380=0.0;
+ZT0381=0.0;
+ZT0403=0.0;
+ZT0404=0.0;
+ZT0500=0.0;
+ZT0502=0.0;
+ZT0503=0.0;
+ZT0504=0.0;
+ZT0506=0.0;
+ZT0508=0.0;
+ZT0509=0.0;
+ZT0512=0.0;
+ZT0513=0.0;
+ZT0514=0.0;
+ZT0515=0.0;
+ZT0516=0.0;
+ZT0517=0.0;
+ZT0520=0.0;
+ZT0525=0.0;
+ZT0526=0.0;
+ZT0527=0.0;
+ZT0528=0.0;
+ZT0529=0.0;
+ZT0536=0.0;
+ZT0537=0.0;
+ZT0538=0.0;
+ZT0539=0.0;
+ZT0540=0.0;
+ZT0541=0.0;
+ZT0542=0.0;
+ZT0544=0.0;
+ZT0545=0.0;
+ZT0546=0.0;
+ZT0548=0.0;
+ZT0580=0.0;
+ZT0590=0.0;
+ZT0591=0.0;
+ZT0592=0.0;
+ZT0593=0.0;
+ZT0600=0.0;
+ZT0601=0.0;
+ZT0603=0.0;
+ZT0604=0.0;
+ZT0605=0.0;
+ZT0607=0.0;
+ZT0608=0.0;
+ZT0612=0.0;
+ZT0616=0.0;
+ZT0617=0.0;
+ZT0618=0.0;
+ZT0619=0.0;
+ZT0620=0.0;
+ZT0680=0.0;
+ZT0689=0.0;
+ZT0690=0.0;
+ZT0691=0.0;
+ZT0692=0.0;
+ZT0693=0.0;
+ZT0694=0.0;
+//------产品线变量声明------
+//------客户分类变量初始化------
+//------评分卡变量初始化------
+}
+//$END_FUNCTION$
+//$BEGIN_FUNCTION$
+private void evalExtAttribute(Map $1)throws CDSEException{
+//------外部变量赋值------
+AT0001=getNumericValue("AT0001",$1);
+AT0002=getNumericValue("AT0002",$1);
+AT0003=getNumericValue("AT0003",$1);
+AT0004=getNumericValue("AT0004",$1);
+AT0005=getNumericValue("AT0005",$1);
+AT0006=getNumericValue("AT0006",$1);
+AT0007=getNumericValue("AT0007",$1);
+AT0008=getNumericValue("AT0008",$1);
+AT0009=getNumericValue("AT0009",$1);
+AT0010=getNumericValue("AT0010",$1);
+AT0011=getNumericValue("AT0011",$1);
+AT0012=getNumericValue("AT0012",$1);
+AT0013=getNumericValue("AT0013",$1);
+AT0014=getNumericValue("AT0014",$1);
+AT0015=getNumericValue("AT0015",$1);
+AT0016=getNumericValue("AT0016",$1);
+AT0017=getNumericValue("AT0017",$1);
+AT0018=getNumericValue("AT0018",$1);
+AT0019=getNumericValue("AT0019",$1);
+AT0020=getNumericValue("AT0020",$1);
+AT0021=getNumericValue("AT0021",$1);
+AT0022=getNumericValue("AT0022",$1);
+AT0023=getNumericValue("AT0023",$1);
+AT0024=getNumericValue("AT0024",$1);
+AT0025=getNumericValue("AT0025",$1);
+AT0026=getNumericValue("AT0026",$1);
+AT0027=getNumericValue("AT0027",$1);
+AT0028=getNumericValue("AT0028",$1);
+AT0029=getNumericValue("AT0029",$1);
+AT0030=getNumericValue("AT0030",$1);
+AT0031=getNumericValue("AT0031",$1);
+AT0032=getNumericValue("AT0032",$1);
+AT0033=getNumericValue("AT0033",$1);
+AT0034=getNumericValue("AT0034",$1);
+AT0035=getNumericValue("AT0035",$1);
+AT0036=getNumericValue("AT0036",$1);
+AT0037=getNumericValue("AT0037",$1);
+AT0038=getNumericValue("AT0038",$1);
+AT0039=getNumericValue("AT0039",$1);
+AT0040=getNumericValue("AT0040",$1);
+AT0041=getNumericValue("AT0041",$1);
+AT0042=getNumericValue("AT0042",$1);
+AT0043=getNumericValue("AT0043",$1);
+AT0044=getNumericValue("AT0044",$1);
+AT0045=getNumericValue("AT0045",$1);
+AT0046=getNumericValue("AT0046",$1);
+AT0047=getNumericValue("AT0047",$1);
+AT0048=getNumericValue("AT0048",$1);
+AT0049=getNumericValue("AT0049",$1);
+AT0050=getNumericValue("AT0050",$1);
+AT0051=getNumericValue("AT0051",$1);
+AT0052=getNumericValue("AT0052",$1);
+AT0053=getNumericValue("AT0053",$1);
+AT0054=getNumericValue("AT0054",$1);
+AT0055=getNumericValue("AT0055",$1);
+AT0056=getNumericValue("AT0056",$1);
+AT0057=getNumericValue("AT0057",$1);
+AT0058=getNumericValue("AT0058",$1);
+AT0059=getNumericValue("AT0059",$1);
+AT0060=getNumericValue("AT0060",$1);
+AT0061=getNumericValue("AT0061",$1);
+AT0062=getNumericValue("AT0062",$1);
+AT0063=getNumericValue("AT0063",$1);
+AT0064=getNumericValue("AT0064",$1);
+AT0065=getNumericValue("AT0065",$1);
+AT0066=getNumericValue("AT0066",$1);
+AT0067=getNumericValue("AT0067",$1);
+AT0068=getNumericValue("AT0068",$1);
+AT0069=getNumericValue("AT0069",$1);
+AT0070=getNumericValue("AT0070",$1);
+AT0071=getNumericValue("AT0071",$1);
+AT0072=getNumericValue("AT0072",$1);
+AT0073=getNumericValue("AT0073",$1);
+AT0074=getNumericValue("AT0074",$1);
+AT0075=getNumericValue("AT0075",$1);
+AT0076=getNumericValue("AT0076",$1);
+AT0077=getNumericValue("AT0077",$1);
+AT0078=getNumericValue("AT0078",$1);
+AT0079=getNumericValue("AT0079",$1);
+AT0080=getNumericValue("AT0080",$1);
+AT0081=getNumericValue("AT0081",$1);
+AT0082=getNumericValue("AT0082",$1);
+AT0083=getNumericValue("AT0083",$1);
+AT0084=getNumericValue("AT0084",$1);
+AT0085=getNumericValue("AT0085",$1);
+AT0086=getNumericValue("AT0086",$1);
+AT0087=getNumericValue("AT0087",$1);
+AT0088=getNumericValue("AT0088",$1);
+AT0089=getNumericValue("AT0089",$1);
+AT0090=getNumericValue("AT0090",$1);
+AT0091=getNumericValue("AT0091",$1);
+AT0092=getNumericValue("AT0092",$1);
+AT0093=getNumericValue("AT0093",$1);
+AT0094=getNumericValue("AT0094",$1);
+AT0095=getNumericValue("AT0095",$1);
+AT0096=getNumericValue("AT0096",$1);
+AT0097=getNumericValue("AT0097",$1);
+AT0098=getNumericValue("AT0098",$1);
+AT0099=getNumericValue("AT0099",$1);
+AT0100=getNumericValue("AT0100",$1);
+AT0101=getNumericValue("AT0101",$1);
+AT0102=getNumericValue("AT0102",$1);
+AT0105=getNumericValue("AT0105",$1);
+AT0106=getNumericValue("AT0106",$1);
+AT0107=getNumericValue("AT0107",$1);
+AT0108=getNumericValue("AT0108",$1);
+AT0109=getNumericValue("AT0109",$1);
+AT0110=getNumericValue("AT0110",$1);
+AT0111=getNumericValue("AT0111",$1);
+AT0112=getNumericValue("AT0112",$1);
+AT0113=getNumericValue("AT0113",$1);
+AT0114=getNumericValue("AT0114",$1);
+AT0115=getNumericValue("AT0115",$1);
+AT0116=getNumericValue("AT0116",$1);
+AT0117=getNumericValue("AT0117",$1);
+AT0118=getNumericValue("AT0118",$1);
+AT0119=getNumericValue("AT0119",$1);
+AT0120=getNumericValue("AT0120",$1);
+AT0121=getNumericValue("AT0121",$1);
+AT0122=getNumericValue("AT0122",$1);
+AT0123=getStringValue("AT0123",$1);
+AT0124=getNumericValue("AT0124",$1);
+AT0125=getNumericValue("AT0125",$1);
+AT0126=getNumericValue("AT0126",$1);
+AT0127=getNumericValue("AT0127",$1);
+AT0129=getNumericValue("AT0129",$1);
+AT0130=getNumericValue("AT0130",$1);
+AT0131=getNumericValue("AT0131",$1);
+AT0132=getNumericValue("AT0132",$1);
+AT0133=getNumericValue("AT0133",$1);
+AT0134=getNumericValue("AT0134",$1);
+AT0135=getNumericValue("AT0135",$1);
+AT0136=getNumericValue("AT0136",$1);
+AT0137=getNumericValue("AT0137",$1);
+AT0138=getNumericValue("AT0138",$1);
+AT0139=getNumericValue("AT0139",$1);
+AT0140=getNumericValue("AT0140",$1);
+AT0141=getNumericValue("AT0141",$1);
+AT0142=getNumericValue("AT0142",$1);
+AT0143=getNumericValue("AT0143",$1);
+AT0144=getNumericValue("AT0144",$1);
+AT0145=getNumericValue("AT0145",$1);
+AT0146=getNumericValue("AT0146",$1);
+AT0147=getNumericValue("AT0147",$1);
+AT0148=getNumericValue("AT0148",$1);
+AT0149=getNumericValue("AT0149",$1);
+AT0150=getNumericValue("AT0150",$1);
+AT0151=getNumericValue("AT0151",$1);
+AT0152=getNumericValue("AT0152",$1);
+AT0153=getNumericValue("AT0153",$1);
+AT0154=getNumericValue("AT0154",$1);
+AT0155=getNumericValue("AT0155",$1);
+AT0156=getNumericValue("AT0156",$1);
+AT0157=getNumericValue("AT0157",$1);
+AT0158=getNumericValue("AT0158",$1);
+AT0159=getNumericValue("AT0159",$1);
+AT0160=getNumericValue("AT0160",$1);
+AT0161=getNumericValue("AT0161",$1);
+AT0162=getNumericValue("AT0162",$1);
+AT0163=getNumericValue("AT0163",$1);
+AT0164=getNumericValue("AT0164",$1);
+AT0165=getNumericValue("AT0165",$1);
+AT0166=getNumericValue("AT0166",$1);
+AT0167=getNumericValue("AT0167",$1);
+AT0168=getNumericValue("AT0168",$1);
+AT0169=getNumericValue("AT0169",$1);
+AT0170=getNumericValue("AT0170",$1);
+AT0171=getNumericValue("AT0171",$1);
+AT0172=getStringValue("AT0172",$1);
+AT0173=getStringValue("AT0173",$1);
+AT0174=getNumericValue("AT0174",$1);
+AT0175=getNumericValue("AT0175",$1);
+AT0176=getNumericValue("AT0176",$1);
+AT0177=getNumericValue("AT0177",$1);
+AT0178=getNumericValue("AT0178",$1);
+AT0179=getNumericValue("AT0179",$1);
+AT0180=getNumericValue("AT0180",$1);
+AT0181=getNumericValue("AT0181",$1);
+AT0182=getNumericValue("AT0182",$1);
+AT0183=getNumericValue("AT0183",$1);
+AT0184=getNumericValue("AT0184",$1);
+AT0185=getNumericValue("AT0185",$1);
+AT0186=getNumericValue("AT0186",$1);
+AT0187=getNumericValue("AT0187",$1);
+AT0188=getNumericValue("AT0188",$1);
+AT0189=getNumericValue("AT0189",$1);
+AT0190=getNumericValue("AT0190",$1);
+AT0193=getStringValue("AT0193",$1);
+AT0194=getStringValue("AT0194",$1);
+AT0195=getStringValue("AT0195",$1);
+AT0196=getStringValue("AT0196",$1);
+AT0197=getNumericValue("AT0197",$1);
+AT0198=getNumericValue("AT0198",$1);
+AT0199=getNumericValue("AT0199",$1);
+AT0200=getNumericValue("AT0200",$1);
+AT0201=getNumericValue("AT0201",$1);
+AT0202=getNumericValue("AT0202",$1);
+AT0203=getNumericValue("AT0203",$1);
+AT0204=getNumericValue("AT0204",$1);
+AT0205=getNumericValue("AT0205",$1);
+AT0206=getNumericValue("AT0206",$1);
+AT0207=getNumericValue("AT0207",$1);
+AT0208=getNumericValue("AT0208",$1);
+AT0209=getNumericValue("AT0209",$1);
+AT0210=getNumericValue("AT0210",$1);
+AT0211=getNumericValue("AT0211",$1);
+AT0212=getNumericValue("AT0212",$1);
+AT0213=getNumericValue("AT0213",$1);
+AT0214=getNumericValue("AT0214",$1);
+AT0215=getNumericValue("AT0215",$1);
+AT0216=getNumericValue("AT0216",$1);
+AT0217=getNumericValue("AT0217",$1);
+AT0218=getNumericValue("AT0218",$1);
+AT0220=getNumericValue("AT0220",$1);
+AT0221=getNumericValue("AT0221",$1);
+AT0222=getNumericValue("AT0222",$1);
+AT0225=getNumericValue("AT0225",$1);
+AT0226=getNumericValue("AT0226",$1);
+AT0227=getNumericValue("AT0227",$1);
+AT0228=getNumericValue("AT0228",$1);
+AT0230=getNumericValue("AT0230",$1);
+AT0231=getNumericValue("AT0231",$1);
+AT0232=getNumericValue("AT0232",$1);
+AT0235=getNumericValue("AT0235",$1);
+AT0236=getNumericValue("AT0236",$1);
+AT0239=getNumericValue("AT0239",$1);
+AT0240=getNumericValue("AT0240",$1);
+AT0245=getNumericValue("AT0245",$1);
+AT0246=getStringValue("AT0246",$1);
+AT0247=getNumericValue("AT0247",$1);
+AT0250=getNumericValue("AT0250",$1);
+AT0251=getNumericValue("AT0251",$1);
+AT0252=getNumericValue("AT0252",$1);
+AT0253=getNumericValue("AT0253",$1);
+AT0255=getNumericValue("AT0255",$1);
+AT0256=getNumericValue("AT0256",$1);
+AT0257=getNumericValue("AT0257",$1);
+AT0258=getNumericValue("AT0258",$1);
+AT0259=getNumericValue("AT0259",$1);
+AT0263=getNumericValue("AT0263",$1);
+AT0268=getNumericValue("AT0268",$1);
+AT0269=getNumericValue("AT0269",$1);
+AT0270=getNumericValue("AT0270",$1);
+AT0271=getNumericValue("AT0271",$1);
+AT0273=getNumericValue("AT0273",$1);
+AT0274=getNumericValue("AT0274",$1);
+AT0275=getNumericValue("AT0275",$1);
+AT0276=getNumericValue("AT0276",$1);
+AT0277=getNumericValue("AT0277",$1);
+AT0278=getNumericValue("AT0278",$1);
+AT0279=getNumericValue("AT0279",$1);
+AT0280=getNumericValue("AT0280",$1);
+AT0281=getNumericValue("AT0281",$1);
+AT0282=getNumericValue("AT0282",$1);
+AT0283=getNumericValue("AT0283",$1);
+AT0284=getNumericValue("AT0284",$1);
+AT0286=getNumericValue("AT0286",$1);
+AT0287=getNumericValue("AT0287",$1);
+AT0288=getNumericValue("AT0288",$1);
+AT0289=getNumericValue("AT0289",$1);
+AT0290=getNumericValue("AT0290",$1);
+AT0291=getNumericValue("AT0291",$1);
+AT0292=getNumericValue("AT0292",$1);
+AT0293=getNumericValue("AT0293",$1);
+AT0294=getNumericValue("AT0294",$1);
+AT0297=getNumericValue("AT0297",$1);
+AT0298=getNumericValue("AT0298",$1);
+AT0299=getNumericValue("AT0299",$1);
+AT0300=getNumericValue("AT0300",$1);
+AT0301=getNumericValue("AT0301",$1);
+AT0302=getNumericValue("AT0302",$1);
+AT0303=getNumericValue("AT0303",$1);
+AT0304=getNumericValue("AT0304",$1);
+AT0305=getNumericValue("AT0305",$1);
+AT0306=getNumericValue("AT0306",$1);
+AT0307=getNumericValue("AT0307",$1);
+AT0308=getNumericValue("AT0308",$1);
+AT0309=getNumericValue("AT0309",$1);
+AT0310=getNumericValue("AT0310",$1);
+AT0311=getNumericValue("AT0311",$1);
+AT0312=getNumericValue("AT0312",$1);
+AT0313=getNumericValue("AT0313",$1);
+AT0314=getNumericValue("AT0314",$1);
+AT0315=getNumericValue("AT0315",$1);
+AT0316=getNumericValue("AT0316",$1);
+AT0317=getNumericValue("AT0317",$1);
+AT0318=getNumericValue("AT0318",$1);
+AT0319=getNumericValue("AT0319",$1);
+AT0320=getNumericValue("AT0320",$1);
+AT0321=getNumericValue("AT0321",$1);
+AT0322=getNumericValue("AT0322",$1);
+AT0323=getNumericValue("AT0323",$1);
+AT0324=getNumericValue("AT0324",$1);
+AT0325=getNumericValue("AT0325",$1);
+AT0326=getNumericValue("AT0326",$1);
+AT0327=getNumericValue("AT0327",$1);
+AT0328=getNumericValue("AT0328",$1);
+AT0329=getNumericValue("AT0329",$1);
+AT0330=getNumericValue("AT0330",$1);
+AT0331=getNumericValue("AT0331",$1);
+AT0332=getNumericValue("AT0332",$1);
+AT0333=getNumericValue("AT0333",$1);
+AT0334=getNumericValue("AT0334",$1);
+AT0335=getNumericValue("AT0335",$1);
+AT0336=getNumericValue("AT0336",$1);
+AT0337=getNumericValue("AT0337",$1);
+AT0338=getNumericValue("AT0338",$1);
+AT0339=getNumericValue("AT0339",$1);
+AT0340=getNumericValue("AT0340",$1);
+AT0341=getNumericValue("AT0341",$1);
+AT0342=getNumericValue("AT0342",$1);
+AT0343=getNumericValue("AT0343",$1);
+AT0344=getNumericValue("AT0344",$1);
+AT0345=getNumericValue("AT0345",$1);
+AT0346=getNumericValue("AT0346",$1);
+AT0347=getNumericValue("AT0347",$1);
+AT0348=getNumericValue("AT0348",$1);
+AT0349=getNumericValue("AT0349",$1);
+AT0350=getNumericValue("AT0350",$1);
+AT0351=getStringValue("AT0351",$1);
+AT0354=getNumericValue("AT0354",$1);
+AT0356=getNumericValue("AT0356",$1);
+AT0357=getNumericValue("AT0357",$1);
+AT0358=getNumericValue("AT0358",$1);
+AT0359=getNumericValue("AT0359",$1);
+AT0360=getNumericValue("AT0360",$1);
+AT0361=getNumericValue("AT0361",$1);
+AT0362=getNumericValue("AT0362",$1);
+AT0363=getNumericValue("AT0363",$1);
+AT0364=getNumericValue("AT0364",$1);
+AT0365=getNumericValue("AT0365",$1);
+AT0366=getNumericValue("AT0366",$1);
+AT0367=getNumericValue("AT0367",$1);
+AT0368=getNumericValue("AT0368",$1);
+AT0369=getNumericValue("AT0369",$1);
+AT0370=getNumericValue("AT0370",$1);
+AT0371=getNumericValue("AT0371",$1);
+AT0372=getNumericValue("AT0372",$1);
+AT0373=getNumericValue("AT0373",$1);
+AT0374=getNumericValue("AT0374",$1);
+AT0375=getNumericValue("AT0375",$1);
+AT0376=getNumericValue("AT0376",$1);
+AT0377=getNumericValue("AT0377",$1);
+AT0378=getNumericValue("AT0378",$1);
+AT0380=getNumericValue("AT0380",$1);
+AT0381=getNumericValue("AT0381",$1);
+AT0382=getNumericValue("AT0382",$1);
+AT0383=getNumericValue("AT0383",$1);
+AT0384=getNumericValue("AT0384",$1);
+AT0385=getNumericValue("AT0385",$1);
+AT0386=getNumericValue("AT0386",$1);
+AT0389=getNumericValue("AT0389",$1);
+AT0390=getNumericValue("AT0390",$1);
+AT0391=getNumericValue("AT0391",$1);
+AT0392=getNumericValue("AT0392",$1);
+AT0393=getNumericValue("AT0393",$1);
+AT0394=getNumericValue("AT0394",$1);
+AT0395=getNumericValue("AT0395",$1);
+AT0397=getNumericValue("AT0397",$1);
+AT0398=getNumericValue("AT0398",$1);
+AT0399=getNumericValue("AT0399",$1);
+AT0400=getNumericValue("AT0400",$1);
+AT0402=getNumericValue("AT0402",$1);
+AT0500=getNumericValue("AT0500",$1);
+AT0501=getNumericValue("AT0501",$1);
+AT0512=getNumericValue("AT0512",$1);
+AT0513=getNumericValue("AT0513",$1);
+AT0514=getNumericValue("AT0514",$1);
+AT0515=getNumericValue("AT0515",$1);
+AT0516=getNumericValue("AT0516",$1);
+AT0517=getNumericValue("AT0517",$1);
+AT0518=getNumericValue("AT0518",$1);
+AT0519=getNumericValue("AT0519",$1);
+AT0520=getNumericValue("AT0520",$1);
+AT0521=getNumericValue("AT0521",$1);
+AT0522=getNumericValue("AT0522",$1);
+AT0523=getNumericValue("AT0523",$1);
+AT0524=getNumericValue("AT0524",$1);
+AT0525=getNumericValue("AT0525",$1);
+AT0526=getNumericValue("AT0526",$1);
+AT0527=getNumericValue("AT0527",$1);
+AT0528=getNumericValue("AT0528",$1);
+AT0529=getNumericValue("AT0529",$1);
+AT0530=getNumericValue("AT0530",$1);
+AT0600=getNumericValue("AT0600",$1);
+AT0601=getNumericValue("AT0601",$1);
+AT0602=getNumericValue("AT0602",$1);
+AT0603=getNumericValue("AT0603",$1);
+AT0604=getNumericValue("AT0604",$1);
+}
+//$END_FUNCTION$
+//$BEGIN_FUNCTION$
+private void armtkAttribute()throws CDSEException{
+//------变量算法生成------
+
+try{
+  ZT0044 =    AT0189 ;
+
+}catch(Exception attributeErr)
+{throw new CDSEException("ZT0044:"+attributeErr.getMessage());}
+
+try{
+if( AT0123.equals("BAOJI")==true  || AT0123.equals("CHANGZ")==true  || AT0123.equals("NANC")==true  || AT0123.equals("DY")==true  || AT0123.equals("FL")==true)
+{
+  ZT0049 =    1 ;
+}else
+if( AT0123.equals("CHENZ")==true  || AT0123.equals("HONGHE")==true  || AT0123.equals("HS")==true  || AT0123.equals("XT")==true  || AT0123.equals("QZ")==true  || AT0123.equals("BENGBU")==true  || AT0123.equals("SY")==true  || AT0123.equals("HK")==true  || AT0123.equals("NN")==true  || AT0123.equals("LZ")==true  || AT0123.equals("WUHU")==true  || AT0123.equals("GY")==true  || AT0123.equals("MAS")==true  || AT0123.equals("WX")==true  || AT0123.equals("KL")==true  || AT0123.equals("XIANY")==true  || AT0123.equals("JH")==true  || AT0123.equals("HA")==true  || AT0123.equals("BT")==true  || AT0123.equals("HHHT")==true  || AT0123.equals("CC")==true  || AT0123.equals("HEB")==true  || AT0123.equals("TAIZ")==true  || AT0123.equals("SHENY")==true  || AT0123.equals("XX")==true)
+{
+  ZT0049 =    2 ;
+}else
+if( AT0123.equals("CANGZ")==true  || AT0123.equals("AQ")==true  || AT0123.equals("YB")==true  || AT0123.equals("FZ")==true  || AT0123.equals("HY")==true  || AT0123.equals("LUZ")==true  || AT0123.equals("NT2")==true  || AT0123.equals("TY")==true  || AT0123.equals("ZH")==true  || AT0123.equals("XY")==true  || AT0123.equals("TJ")==true  || AT0123.equals("SX")==true  || AT0123.equals("YX")==true  || AT0123.equals("ZY")==true  || AT0123.equals("ZB")==true  || AT0123.equals("LS")==true  || AT0123.equals("SZ2")==true  || AT0123.equals("JY")==true  || AT0123.equals("ZJ")==true  || AT0123.equals("NT")==true  || AT0123.equals("HF2")==true  || AT0123.equals("NB")==true  || AT0123.equals("JZ")==true)
+{
+  ZT0049 =    3 ;
+}else
+if( AT0123.equals("ZG")==true  || AT0123.equals("SN")==true  || AT0123.equals("HZ")==true  || AT0123.equals("YZ")==true  || AT0123.equals("YC")==true  || AT0123.equals("CS")==true  || AT0123.equals("WF")==true  || AT0123.equals("JN")==true  || AT0123.equals("XM")==true  || AT0123.equals("KM")==true  || AT0123.equals("HAND")==true  || AT0123.equals("TS")==true  || AT0123.equals("DL")==true  || AT0123.equals("YY")==true  || AT0123.equals("XA")==true  || AT0123.equals("WH")==true  || AT0123.equals("LINY")==true  || AT0123.equals("SZ")==true  || AT0123.equals("MY")==true  || AT0123.equals("CZ")==true  || AT0123.equals("CQ")==true  || AT0123.equals("SJZ")==true  || AT0123.equals("QD")==true  || AT0123.equals("NJ")==true  || AT0123.equals("NC")==true  || AT0123.equals("XZ")==true  || AT0123.equals("SH")==true  || AT0123.equals("LY")==true  || AT0123.equals("CD")==true  || AT0123.equals("ZHUZ")==true  || AT0123.equals("ZZ")==true  || AT0123.equals("WH2")==true)
+{
+  ZT0049 =    4 ;
+}else{
+
+  ZT0049 =    2 ;
+}
+
+}catch(Exception attributeErr)
+{throw new CDSEException("ZT0049:"+attributeErr.getMessage());}
+
+try{
+if( AT0123.equals("WF")==true  || AT0123.equals("ZH")==true  || AT0123.equals("DY")==true  || AT0123.equals("ZY")==true  || AT0123.equals("QZ")==true  || AT0123.equals("BT")==true  || AT0123.equals("HK")==true  || AT0123.equals("NT2")==true  || AT0123.equals("CHENZ")==true  || AT0123.equals("NANC")==true)
+{
+  ZT0059 =    1 ;
+}else
+if( AT0123.equals("CQ")==true  || AT0123.equals("WH")==true  || AT0123.equals("HS")==true  || AT0123.equals("CZ")==true  || AT0123.equals("ZB")==true  || AT0123.equals("CHANGZ")==true  || AT0123.equals("JZ")==true  || AT0123.equals("MAS")==true  || AT0123.equals("HONGHE")==true  || AT0123.equals("TY")==true  || AT0123.equals("NN")==true  || AT0123.equals("DL")==true  || AT0123.equals("XT")==true  || AT0123.equals("SJZ")==true  || AT0123.equals("TS")==true  || AT0123.equals("CS")==true  || AT0123.equals("YC")==true  || AT0123.equals("KM")==true  || AT0123.equals("QD")==true  || AT0123.equals("LY")==true  || AT0123.equals("HAND")==true  || AT0123.equals("HF2")==true  || AT0123.equals("FZ")==true  || AT0123.equals("WX")==true  || AT0123.equals("SY")==true  || AT0123.equals("LINY")==true  || AT0123.equals("NC")==true  || AT0123.equals("BENGBU")==true  || AT0123.equals("CANGZ")==true)
+{
+  ZT0059 =    2 ;
+}else
+if( AT0123.equals("XA")==true  || AT0123.equals("YZ")==true  || AT0123.equals("JY")==true  || AT0123.equals("YY")==true  || AT0123.equals("MY")==true  || AT0123.equals("WUHU")==true  || AT0123.equals("ZJ")==true  || AT0123.equals("LS")==true  || AT0123.equals("SZ2")==true  || AT0123.equals("BAOJI")==true  || AT0123.equals("SN")==true  || AT0123.equals("CD")==true  || AT0123.equals("ZHUZ")==true  || AT0123.equals("YB")==true  || AT0123.equals("YX")==true  || AT0123.equals("XZ")==true  || AT0123.equals("ZZ")==true  || AT0123.equals("HY")==true  || AT0123.equals("LZ")==true  || AT0123.equals("SHENY")==true  || AT0123.equals("NT")==true  || AT0123.equals("XIANY")==true)
+{
+  ZT0059 =    3 ;
+}else
+if( AT0123.equals("LUZ")==true  || AT0123.equals("SZ")==true  || AT0123.equals("NJ")==true  || AT0123.equals("XY")==true  || AT0123.equals("GY")==true  || AT0123.equals("HHHT")==true  || AT0123.equals("JN")==true  || AT0123.equals("HEB")==true  || AT0123.equals("HZ")==true  || AT0123.equals("KL")==true  || AT0123.equals("ZG")==true  || AT0123.equals("CC")==true  || AT0123.equals("TAIZ")==true  || AT0123.equals("SX")==true  || AT0123.equals("XM")==true  || AT0123.equals("NB")==true  || AT0123.equals("AQ")==true  || AT0123.equals("HA")==true)
+{
+  ZT0059 =    4 ;
+}else
+if( AT0123.equals("JH")==true  || AT0123.equals("SH")==true  || AT0123.equals("TJ")==true)
+{
+  ZT0059 =    5 ;
+}else{
+
+  ZT0059 =    0 ;
+}
+
+}catch(Exception attributeErr)
+{throw new CDSEException("ZT0059:"+attributeErr.getMessage());}
+
+try{
+ if(  ZT0059==5 ) ZT0060 = 8187;
+ else if(  ZT0059==1 ) ZT0060 = 9440;
+ else if(  ZT0059==3 ) ZT0060 = 9784;
+ else if(  ZT0059==2 ) ZT0060 = 12394;
+ else if(  ZT0059==0 ) ZT0060 = 12481;
+ else if(  ZT0059==4 ) ZT0060 = 19213;
+
+}catch(Exception attributeErr)
+{throw new CDSEException("ZT0060:"+attributeErr.getMessage());}
+
+try{
+ if(  ZT0059==5 ) ZT0061 = 7611;
+ else if(  ZT0059==1 ) ZT0061 = 7869;
+ else if(  ZT0059==3 ) ZT0061 = 7476;
+ else if(  ZT0059==2 ) ZT0061 = 8684;
+ else if(  ZT0059==0 ) ZT0061 = 8594;
+ else if(  ZT0059==4 ) ZT0061 = 14620;
+
+}catch(Exception attributeErr)
+{throw new CDSEException("ZT0061:"+attributeErr.getMessage());}
+
+try{
+ if(  ZT0059==5 ) ZT0062 = 7206;
+ else if(  ZT0059==1 ) ZT0062 = 6479;
+ else if(  ZT0059==3 ) ZT0062 = 6081;
+ else if(  ZT0059==2 ) ZT0062 = 7027;
+ else if(  ZT0059==0 ) ZT0062 = 7136;
+ else if(  ZT0059==4 ) ZT0062 = 10121;
+
+}catch(Exception attributeErr)
+{throw new CDSEException("ZT0062:"+attributeErr.getMessage());}
+
+try{
+ if(  ZT0059==5 ) ZT0063 = 6950;
+ else if(  ZT0059==1 ) ZT0063 = 6102;
+ else if(  ZT0059==3 ) ZT0063 = 5282;
+ else if(  ZT0059==2 ) ZT0063 = 6188;
+ else if(  ZT0059==0 ) ZT0063 = 6169;
+ else if(  ZT0059==4 ) ZT0063 = 8818;
+
+}catch(Exception attributeErr)
+{throw new CDSEException("ZT0063:"+attributeErr.getMessage());}
+
+try{
+if( ZT0049==1)
+{
+  ZT0066 =    ZT0060 ;
+}else
+if( ZT0049==2)
+{
+  ZT0066 =    ZT0061 ;
+}else
+if( ZT0049==3)
+{
+  ZT0066 =    ZT0062 ;
+}else
+if( ZT0049==4)
+{
+  ZT0066 =    ZT0063 ;
+}
+
+}catch(Exception attributeErr)
+{throw new CDSEException("ZT0066:"+attributeErr.getMessage());}
+
+try{
+if( AT0399==1)
+{
+  ZT0076 =    0.15 ;
+}else{
+
+  ZT0076 =    0 ;
+}
+
+}catch(Exception attributeErr)
+{throw new CDSEException("ZT0076:"+attributeErr.getMessage());}
+
+try{
+if( AT0101==-999)
+{
+  ZT0079 =    0 ;
+}else{
+
+  ZT0079 =    AT0101 ;
+}
+
+}catch(Exception attributeErr)
+{throw new CDSEException("ZT0079:"+attributeErr.getMessage());}
+
+try{
+if( AT0143<=1  && AT0329==0  && AT0154<=1  && AT0300==0  && AT0301==0  && AT0302==0  && AT0155==0)
+{
+  ZT0120 =    1 ;
+}else{
+
+  ZT0120 =    2 ;
+}
+
+}catch(Exception attributeErr)
+{throw new CDSEException("ZT0120:"+attributeErr.getMessage());}
+
+try{
+if( AT0146<=2  && AT0147==0  && AT0157<=2  && AT0158==0  && AT0159==0  && AT0148==0)
+{
+  ZT0121 =    1 ;
+}else{
+
+  ZT0121 =    2 ;
+}
+
+}catch(Exception attributeErr)
+{throw new CDSEException("ZT0121:"+attributeErr.getMessage());}
+
+try{
+  ZT0123 =    AT0143  +   AT0154 ;
+
+}catch(Exception attributeErr)
+{throw new CDSEException("ZT0123:"+attributeErr.getMessage());}
+
+try{
+if( ZT0049==4)
+{
+  ZT0361 =    1 ;
+}else
+if( ZT0049==1)
+{
+  ZT0361 =    2 ;
+}else{
+
+  ZT0361 =    3 ;
+}
+
+}catch(Exception attributeErr)
+{throw new CDSEException("ZT0361:"+attributeErr.getMessage());}
+
+try{
+  ZT0369 =    AT0146  +   AT0157 ;
+
+}catch(Exception attributeErr)
+{throw new CDSEException("ZT0369:"+attributeErr.getMessage());}
+
+try{
+if( AT0147<1  && AT0148<1  && AT0157<1  && AT0159<1)
+{
+  ZT0370 =    1 ;
+}else{
+
+  ZT0370 =    2 ;
+}
+
+}catch(Exception attributeErr)
+{throw new CDSEException("ZT0370:"+attributeErr.getMessage());}
+
+try{
+if( AT0398==0  || AT0398==-999)
+{
+  ZT0403 =    0 ;
+}else{
+
+  ZT0403 =    AT0398  *   30 ;
+}
+
+}catch(Exception attributeErr)
+{throw new CDSEException("ZT0403:"+attributeErr.getMessage());}
+
+try{
+if( AT0340==-1)
+{
+  ZT0500 =    1.5 ;
+}else
+if( AT0340<=6)
+{
+  ZT0500 =    AT0340 ;
+}else{
+
+  ZT0500 =    6 ;
+}
+
+}catch(Exception attributeErr)
+{throw new CDSEException("ZT0500:"+attributeErr.getMessage());}
+
+try{
+  ZT0502 =    POWER(ZT0500,Double.parseDouble(new String("0.333333"))) ;
+
+}catch(Exception attributeErr)
+{throw new CDSEException("ZT0502:"+attributeErr.getMessage());}
+
+try{
+if( ZT0500>=0.01)
+{
+  ZT0503 =    ZT0500 ;
+}else{
+
+  ZT0503 =    0.01 ;
+}
+
+}catch(Exception attributeErr)
+{throw new CDSEException("ZT0503:"+attributeErr.getMessage());}
+
+try{
+  ZT0504 =    LOG(ZT0503) ;
+
+}catch(Exception attributeErr)
+{throw new CDSEException("ZT0504:"+attributeErr.getMessage());}
+
+try{
+if( AT0180==-1)
+{
+  ZT0506 =    1.5 ;
+}else
+if( AT0180<=7)
+{
+  ZT0506 =    AT0180 ;
+}else{
+
+  ZT0506 =    7 ;
+}
+
+}catch(Exception attributeErr)
+{throw new CDSEException("ZT0506:"+attributeErr.getMessage());}
+
+try{
+if( AT0268==-1)
+{
+  ZT0508 =    1.5 ;
+}else
+if( AT0268<=6)
+{
+  ZT0508 =    AT0268 ;
+}else{
+
+  ZT0508 =    6 ;
+}
+
+}catch(Exception attributeErr)
+{throw new CDSEException("ZT0508:"+attributeErr.getMessage());}
+
+try{
+if( AT0040==1)
+{
+  ZT0509 =    1 ;
+}else{
+
+  ZT0509 =    0 ;
+}
+
+}catch(Exception attributeErr)
+{throw new CDSEException("ZT0509:"+attributeErr.getMessage());}
+
+try{
+if( AT0500==-999)
+{
+  ZT0512 =    16000 ;
+}else
+if( AT0500>=86439)
+{
+  ZT0512 =    86439 ;
+}else{
+
+  ZT0512 =    AT0500 ;
+}
+
+}catch(Exception attributeErr)
+{throw new CDSEException("ZT0512:"+attributeErr.getMessage());}
+
+try{
+  ZT0513 =    SQUARE(ZT0512) ;
+
+}catch(Exception attributeErr)
+{throw new CDSEException("ZT0513:"+attributeErr.getMessage());}
+
+try{
+if( AT0500==-999)
+{
+  ZT0514 =    2500 ;
+}else
+if( AT0501==0)
+{
+  ZT0514 =    0 ;
+}else{
+
+  ZT0514 =    AT0500  /   AT0501 ;
+}
+
+}catch(Exception attributeErr)
+{throw new CDSEException("ZT0514:"+attributeErr.getMessage());}
+
+try{
+if( ZT0514>=14406)
+{
+  ZT0515 =    14406 ;
+}else{
+
+  ZT0515 =    ZT0514 ;
+}
+
+}catch(Exception attributeErr)
+{throw new CDSEException("ZT0515:"+attributeErr.getMessage());}
+
+try{
+if( AT0516==0  || AT0515==-999)
+{
+  ZT0516 =    2.07 ;
+}else{
+
+  ZT0516 =    AT0515  /   AT0516 ;
+}
+
+}catch(Exception attributeErr)
+{throw new CDSEException("ZT0516:"+attributeErr.getMessage());}
+
+try{
+if( ZT0516>15.33)
+{
+  ZT0517 =    SQUARE(Double.parseDouble(new String("15.33"))) ;
+}else{
+
+  ZT0517 =    SQUARE(ZT0516) ;
+}
+
+}catch(Exception attributeErr)
+{throw new CDSEException("ZT0517:"+attributeErr.getMessage());}
+
+try{
+if( AT0512==-999  && AT0513==-999  && AT0514==-999)
+{
+  ZT0520 =    SQUARE(Double.parseDouble(new String("11075"))) ;
+}else
+if( AT0512>50000  || AT0513>50000  || AT0514>50000)
+{
+  ZT0520 =    SQUARE(Double.parseDouble(new String("50000"))) ;
+}else
+if( AT0512>=AT0513  && AT0512>=AT0514)
+{
+  ZT0520 =    SQUARE(AT0512) ;
+}else
+if( AT0513>=AT0512  && AT0513>=AT0514)
+{
+  ZT0520 =    SQUARE(AT0513) ;
+}else
+if( AT0514>=AT0512  && AT0514>=AT0513)
+{
+  ZT0520 =    SQUARE(AT0514) ;
+}
+
+}catch(Exception attributeErr)
+{throw new CDSEException("ZT0520:"+attributeErr.getMessage());}
+
+try{
+if( AT0517==-999  || AT0518==0)
+{
+  ZT0525 =    75 ;
+}else{
+
+  ZT0525 =    AT0517  /   AT0518 ;
+}
+
+}catch(Exception attributeErr)
+{throw new CDSEException("ZT0525:"+attributeErr.getMessage());}
+
+try{
+if( ZT0525>34982)
+{
+  ZT0526 =    POWER(Double.parseDouble(new String("34982")),Double.parseDouble(new String("0.333333"))) ;
+}else{
+
+  ZT0526 =    POWER(ZT0525,Double.parseDouble(new String("0.333333"))) ;
+}
+
+}catch(Exception attributeErr)
+{throw new CDSEException("ZT0526:"+attributeErr.getMessage());}
+
+try{
+if( AT0521==3)
+{
+  ZT0527 =    1 ;
+}else{
+
+  ZT0527 =    0 ;
+}
+
+}catch(Exception attributeErr)
+{throw new CDSEException("ZT0527:"+attributeErr.getMessage());}
+
+try{
+if( AT0094<50)
+{
+  ZT0528 =    1 ;
+}else{
+
+  ZT0528 =    0 ;
+}
+
+}catch(Exception attributeErr)
+{throw new CDSEException("ZT0528:"+attributeErr.getMessage());}
+
+try{
+if( AT0321==1  || AT0321==2)
+{
+  ZT0529 =    1 ;
+}else{
+
+  ZT0529 =    0 ;
+}
+
+}catch(Exception attributeErr)
+{throw new CDSEException("ZT0529:"+attributeErr.getMessage());}
+
+try{
+if( AT0522==0  && AT0523==0  && AT0524==0  && AT0525==0  && AT0526==0)
+{
+  ZT0536 =    0 ;
+}else
+if( AT0522>500000  || AT0523>500000  || AT0524>500000  || AT0525>500000  || AT0526>500000)
+{
+  ZT0536 =    500000 ;
+}else
+if( AT0522>=AT0523  && AT0522>=AT0524  && AT0522>=AT0525  && AT0522>=AT0526)
+{
+  ZT0536 =    AT0522 ;
+}else
+if( AT0523>=AT0522  && AT0523>=AT0524  && AT0523>=AT0525  && AT0523>=AT0526)
+{
+  ZT0536 =    AT0523 ;
+}else
+if( AT0524>=AT0522  && AT0524>=AT0523  && AT0524>=AT0525  && AT0524>=AT0526)
+{
+  ZT0536 =    AT0524 ;
+}else
+if( AT0525>=AT0522  && AT0525>=AT0523  && AT0525>=AT0524  && AT0525>=AT0526)
+{
+  ZT0536 =    AT0525 ;
+}else{
+
+  ZT0536 =    AT0526 ;
+}
+
+}catch(Exception attributeErr)
+{throw new CDSEException("ZT0536:"+attributeErr.getMessage());}
+
+try{
+  ZT0537 =    SQUARE(ZT0536) ;
+
+}catch(Exception attributeErr)
+{throw new CDSEException("ZT0537:"+attributeErr.getMessage());}
+
+try{
+  ZT0538 =    AT0003 ;
+
+}catch(Exception attributeErr)
+{throw new CDSEException("ZT0538:"+attributeErr.getMessage());}
+
+try{
+  ZT0539 =    ZT0538  *   ZT0538 ;
+
+}catch(Exception attributeErr)
+{throw new CDSEException("ZT0539:"+attributeErr.getMessage());}
+
+try{
+if( AT0527==-999)
+{
+  ZT0540 =    4.42 ;
+}else{
+
+  ZT0540 =    AT0527  /   365 ;
+}
+
+}catch(Exception attributeErr)
+{throw new CDSEException("ZT0540:"+attributeErr.getMessage());}
+
+try{
+if( AT0529==-999  || AT0530==-999)
+{
+  ZT0541 =    1.5 ;
+}else
+if( AT0530==0)
+{
+  ZT0541 =    1.5 ;
+}else{
+
+  ZT0541 =    AT0529  /   AT0530 ;
+}
+
+}catch(Exception attributeErr)
+{throw new CDSEException("ZT0541:"+attributeErr.getMessage());}
+
+try{
+if( ZT0541>=7.14)
+{
+  ZT0542 =    7.14 ;
+}else
+if( ZT0541<=0.01)
+{
+  ZT0542 =    0.01 ;
+}else{
+
+  ZT0542 =    ZT0541 ;
+}
+
+}catch(Exception attributeErr)
+{throw new CDSEException("ZT0542:"+attributeErr.getMessage());}
+
+try{
+  ZT0544 =    LOG(ZT0542) ;
+
+}catch(Exception attributeErr)
+{throw new CDSEException("ZT0544:"+attributeErr.getMessage());}
+
+try{
+  ZT0545 =    SQUARE(ZT0542) ;
+
+}catch(Exception attributeErr)
+{throw new CDSEException("ZT0545:"+attributeErr.getMessage());}
+
+try{
+if( AT0187==1)
+{
+  ZT0546 =    1 ;
+}else{
+
+  ZT0546 =    0 ;
+}
+
+}catch(Exception attributeErr)
+{throw new CDSEException("ZT0546:"+attributeErr.getMessage());}
+
+try{
+if( AT0101==-999)
+{
+  ZT0548 =    2800  *   2800 ;
+}else
+if( AT0101>10461)
+{
+  ZT0548 =    10461  *   10461 ;
+}else{
+
+  ZT0548 =    SQUARE(AT0101) ;
+}
+
+}catch(Exception attributeErr)
+{throw new CDSEException("ZT0548:"+attributeErr.getMessage());}
+
+try{
+  ZT0580 =    -6.34403731291193000000  +   ZT0502  *   2.1903576316049300  +   ZT0504  *   -0.4590195444697100  +   ZT0506  *   0.1160822438628500  +   ZT0508  *   0.1760393147896900  +   ZT0509  *   -0.3511933367559500  +   ZT0520  *   0.00000000029941427521  +   ZT0526  *   -0.0470534949149266  +   ZT0527  *   0.2151470448416600  +   ZT0528  *   0.4032472297570800  +   ZT0529  *   -0.2376313391774200  +   ZT0536  *   -0.0000015752096757  +   ZT0538  *   0.1613959368271000  +   ZT0539  *   -0.0021649591055054  +   ZT0540  *   -0.0314860458114371  +   ZT0544  *   -0.4456149210493000  +   ZT0545  *   0.0156983499413620  +   ZT0546  *   0.4971042523857500  +   ZT0548  *   -0.00000001650730374677 ;
+
+}catch(Exception attributeErr)
+{throw new CDSEException("ZT0580:"+attributeErr.getMessage());}
+
+try{
+  ZT0590 =    300  - (  40  /   LOG(Double.parseDouble(new String("2"))) ) *   ZT0580 ;
+
+}catch(Exception attributeErr)
+{throw new CDSEException("ZT0590:"+attributeErr.getMessage());}
+
+try{
+  ZT0591 =    ROUND(ZT0590,Double.parseDouble(new String("0"))) ;
+
+}catch(Exception attributeErr)
+{throw new CDSEException("ZT0591:"+attributeErr.getMessage());}
+
+try{
+  ZT0592 =    MIN(ZT0591,Double.parseDouble(new String("999"))) ;
+
+}catch(Exception attributeErr)
+{throw new CDSEException("ZT0592:"+attributeErr.getMessage());}
+
+try{
+  ZT0593 =    MAX(ZT0592,Double.parseDouble(new String("0"))) ;
+
+}catch(Exception attributeErr)
+{throw new CDSEException("ZT0593:"+attributeErr.getMessage());}
+
+try{
+if( AT0187==2)
+{
+  ZT0600 =    1 ;
+}else{
+
+  ZT0600 =    0 ;
+}
+
+}catch(Exception attributeErr)
+{throw new CDSEException("ZT0600:"+attributeErr.getMessage());}
+
+try{
+if( AT0136==-999)
+{
+  ZT0601 =    2 ;
+}else{
+
+  ZT0601 =    AT0136 ;
+}
+
+}catch(Exception attributeErr)
+{throw new CDSEException("ZT0601:"+attributeErr.getMessage());}
+
+try{
+if( ZT0601<=0)
+{
+  ZT0603 =    0 ;
+}else
+if( ZT0601>=7)
+{
+  ZT0603 =    7 ;
+}else{
+
+  ZT0603 =    ZT0601 ;
+}
+
+}catch(Exception attributeErr)
+{throw new CDSEException("ZT0603:"+attributeErr.getMessage());}
+
+try{
+  ZT0604 =    POWER(ZT0603,Double.parseDouble(new String("0.5"))) ;
+
+}catch(Exception attributeErr)
+{throw new CDSEException("ZT0604:"+attributeErr.getMessage());}
+
+try{
+if( AT0381==1  && AT0371!=1  && AT0327!=1  && AT0383!=1)
+{
+  ZT0605 =    1 ;
+}else{
+
+  ZT0605 =    0 ;
+}
+
+}catch(Exception attributeErr)
+{throw new CDSEException("ZT0605:"+attributeErr.getMessage());}
+
+try{
+if( AT0391>80000)
+{
+  ZT0607 =    1 ;
+}else{
+
+  ZT0607 =    0 ;
+}
+
+}catch(Exception attributeErr)
+{throw new CDSEException("ZT0607:"+attributeErr.getMessage());}
+
+try{
+if( AT0003<=38)
+{
+  ZT0608 =    1 ;
+}else{
+
+  ZT0608 =    0 ;
+}
+
+}catch(Exception attributeErr)
+{throw new CDSEException("ZT0608:"+attributeErr.getMessage());}
+
+try{
+if( AT0340==-1)
+{
+  ZT0612 =    9 ;
+}else
+if( AT0340<=0)
+{
+  ZT0612 =    0 ;
+}else
+if( AT0340>=8)
+{
+  ZT0612 =    64 ;
+}else{
+
+  ZT0612 =    AT0340  *   AT0340 ;
+}
+
+}catch(Exception attributeErr)
+{throw new CDSEException("ZT0612:"+attributeErr.getMessage());}
+
+try{
+if( AT0180==-1)
+{
+  ZT0616 =    9 ;
+}else
+if( AT0180<=0)
+{
+  ZT0616 =    0 ;
+}else
+if( AT0180>=8)
+{
+  ZT0616 =    64 ;
+}else{
+
+  ZT0616 =    AT0180  *   AT0180 ;
+}
+
+}catch(Exception attributeErr)
+{throw new CDSEException("ZT0616:"+attributeErr.getMessage());}
+
+try{
+if( AT0392>2)
+{
+  ZT0617 =    1 ;
+}else{
+
+  ZT0617 =    0 ;
+}
+
+}catch(Exception attributeErr)
+{throw new CDSEException("ZT0617:"+attributeErr.getMessage());}
+
+try{
+if( AT0344==3)
+{
+  ZT0618 =    1 ;
+}else{
+
+  ZT0618 =    0 ;
+}
+
+}catch(Exception attributeErr)
+{throw new CDSEException("ZT0618:"+attributeErr.getMessage());}
+
+try{
+if( AT0378==4)
+{
+  ZT0619 =    1 ;
+}else{
+
+  ZT0619 =    0 ;
+}
+
+}catch(Exception attributeErr)
+{throw new CDSEException("ZT0619:"+attributeErr.getMessage());}
+
+try{
+if( AT0339==5)
+{
+  ZT0620 =    1 ;
+}else{
+
+  ZT0620 =    0 ;
+}
+
+}catch(Exception attributeErr)
+{throw new CDSEException("ZT0620:"+attributeErr.getMessage());}
+
+try{
+  ZT0680 =    -4.4101  +   ZT0600  *   -0.7925  +   ZT0604  *   0.4007  +   ZT0605  *   0.5421  +   ZT0607  *   -0.4908  +   ZT0608  *   0.3865  +   ZT0612  *   0.0215  +   ZT0616  *   0.0196  +   ZT0617  *   -0.488  +   ZT0618  *   0.5134  +   ZT0619  *   0.3191  +   ZT0620  *   0.4716 ;
+
+}catch(Exception attributeErr)
+{throw new CDSEException("ZT0680:"+attributeErr.getMessage());}
+
+try{
+  ZT0690 =    300  - (  40  /   LOG(Double.parseDouble(new String("2"))) ) *   ZT0680 ;
+
+}catch(Exception attributeErr)
+{throw new CDSEException("ZT0690:"+attributeErr.getMessage());}
+
+try{
+  ZT0691 =    ROUND(ZT0690,Double.parseDouble(new String("0"))) ;
+
+}catch(Exception attributeErr)
+{throw new CDSEException("ZT0691:"+attributeErr.getMessage());}
+
+try{
+  ZT0692 =    39.17606  +   0.89955  *   ZT0691 ;
+
+}catch(Exception attributeErr)
+{throw new CDSEException("ZT0692:"+attributeErr.getMessage());}
+
+try{
+  ZT0693 =    MIN(ZT0692,Double.parseDouble(new String("999"))) ;
+
+}catch(Exception attributeErr)
+{throw new CDSEException("ZT0693:"+attributeErr.getMessage());}
+
+try{
+if( ZT0079>=ZT0403)
+{
+  ZT0067 =    1 ;
+}else{
+
+  ZT0067 =    2 ;
+}
+
+}catch(Exception attributeErr)
+{throw new CDSEException("ZT0067:"+attributeErr.getMessage());}
+
+try{
+if( ZT0079>=ZT0403)
+{
+  ZT0078 =    ZT0403 ;
+}else{
+
+  ZT0078 =    AT0101 ;
+}
+
+}catch(Exception attributeErr)
+{throw new CDSEException("ZT0078:"+attributeErr.getMessage());}
+
+try{
+  ZT0380 =    ZT0593 ;
+
+}catch(Exception attributeErr)
+{throw new CDSEException("ZT0380:"+attributeErr.getMessage());}
+
+try{
+if( ZT0593<=360)
+{
+  ZT0381 =    4.3 ;
+}else
+if( ZT0593>=361  && ZT0593<=380)
+{
+  ZT0381 =    4.2 ;
+}else
+if( ZT0593>=381  && ZT0593<=400)
+{
+  ZT0381 =    4.1 ;
+}else
+if( ZT0593>=401  && ZT0593<=420)
+{
+  ZT0381 =    3.2 ;
+}else
+if( ZT0593>=421  && ZT0593<=440)
+{
+  ZT0381 =    3.1 ;
+}else
+if( ZT0593>=441  && ZT0593<=460)
+{
+  ZT0381 =    2.2 ;
+}else
+if( ZT0593>=461  && ZT0593<=480)
+{
+  ZT0381 =    2.1 ;
+}else
+if( ZT0593>=481  && ZT0593<=500)
+{
+  ZT0381 =    1.3 ;
+}else
+if( ZT0593>=501  && ZT0593<=520)
+{
+  ZT0381 =    1.2 ;
+}else
+if( ZT0593>=521)
+{
+  ZT0381 =    1.1 ;
+}else{
+
+  ZT0381 =    0 ;
+}
+
+}catch(Exception attributeErr)
+{throw new CDSEException("ZT0381:"+attributeErr.getMessage());}
+
+try{
+  ZT0689 =    MAX(ZT0693,Double.parseDouble(new String("0"))) ;
+
+}catch(Exception attributeErr)
+{throw new CDSEException("ZT0689:"+attributeErr.getMessage());}
+
+try{
+  ZT0694 =    ROUND(ZT0689,Double.parseDouble(new String("0"))) ;
+
+}catch(Exception attributeErr)
+{throw new CDSEException("ZT0694:"+attributeErr.getMessage());}
+
+try{
+  ZT0036 =    ZT0694 ;
+
+}catch(Exception attributeErr)
+{throw new CDSEException("ZT0036:"+attributeErr.getMessage());}
+
+try{
+if( ZT0694<=440)
+{
+  ZT0037 =    4.3 ;
+}else
+if( ZT0694>=441  && ZT0694<=460)
+{
+  ZT0037 =    4.2 ;
+}else
+if( ZT0694>=461  && ZT0694<=480)
+{
+  ZT0037 =    4.1 ;
+}else
+if( ZT0694>=481  && ZT0694<=500)
+{
+  ZT0037 =    3.2 ;
+}else
+if( ZT0694>=501  && ZT0694<=520)
+{
+  ZT0037 =    3.1 ;
+}else
+if( ZT0694>=521  && ZT0694<=540)
+{
+  ZT0037 =    2.2 ;
+}else
+if( ZT0694>=541  && ZT0694<=560)
+{
+  ZT0037 =    2.1 ;
+}else
+if( ZT0694>=561  && ZT0694<=580)
+{
+  ZT0037 =    1.3 ;
+}else
+if( ZT0694>=581  && ZT0694<=600)
+{
+  ZT0037 =    1.2 ;
+}else
+if( ZT0694>=601)
+{
+  ZT0037 =    1.1 ;
+}else{
+
+  ZT0037 =    0 ;
+}
+
+}catch(Exception attributeErr)
+{throw new CDSEException("ZT0037:"+attributeErr.getMessage());}
+
+try{
+if( ZT0381==1.1)
+{
+  ZT0058 =    1 ;
+}else
+if( ZT0381==1.2  || ZT0381==1.3  || ZT0381==2.1)
+{
+  ZT0058 =    2 ;
+}else
+if( ZT0381==2.2  || ZT0381==3.1  || ZT0381==3.2)
+{
+  ZT0058 =    3 ;
+}else{
+
+  ZT0058 =    4 ;
+}
+
+}catch(Exception attributeErr)
+{throw new CDSEException("ZT0058:"+attributeErr.getMessage());}
+
+try{
+  ZT0064 =    ZT0078 ;
+
+}catch(Exception attributeErr)
+{throw new CDSEException("ZT0064:"+attributeErr.getMessage());}
+
+try{
+if( (ZT0593<=360  || (ZT0593>=361  && ZT0593<=380)  || (ZT0593>=381  && ZT0593<=400))  && ((ZT0694>=601  || (ZT0694>=581  && ZT0694<=600)  || (ZT0694>=561  && ZT0694<=580)  || (ZT0694>=541  && ZT0694<=560)  || (ZT0694>=521  && ZT0694<=540)  || (ZT0694>=501  && ZT0694<=520)  || (ZT0694>=481  && ZT0694<=500)  || (ZT0694>=461  && ZT0694<=480)  || (ZT0694>=441  && ZT0694<=460)  || (ZT0694<=440))))
+{
+  ZT0065 =    4 ;
+}else
+if( (ZT0593>=401  && ZT0593<=420)  && ((ZT0694<=440  || (ZT0694>=441  && ZT0694<=460)  || (ZT0694>=461  && ZT0694<=480)  || (ZT0694>=481  && ZT0694<=500)  || (ZT0694>=501  && ZT0694<=520)  || (ZT0694>=521  && ZT0694<=540)  || (ZT0694>=541  && ZT0694<=560)  || (ZT0694>=561  && ZT0694<=580)  || (ZT0694>=581  && ZT0694<=600))))
+{
+  ZT0065 =    3 ;
+}else
+if( (ZT0593>=401  && ZT0593<=420)  && ZT0694>=601)
+{
+  ZT0065 =    2 ;
+}else
+if( (ZT0593>=421  && ZT0593<=440)  && ((ZT0694<=440)  || (ZT0694>=441  && ZT0694<=460)  || (ZT0694>=461  && ZT0694<=480)  || (ZT0694>=481  && ZT0694<=500)  || (ZT0694>=501  && ZT0694<=520)  || (ZT0694>=521  && ZT0694<=540)  || (ZT0694>=541  && ZT0694<=560)  || (ZT0694>=561  && ZT0694<=580)  || (ZT0694>=581  && ZT0694<=600)  || ZT0694>=601))
+{
+  ZT0065 =    2 ;
+}else
+if( (ZT0593>=441  && ZT0593<=460)  && ((ZT0694<=440  || (ZT0694>=441  && ZT0694<=460)  || (ZT0694>=461  && ZT0694<=480)  || (ZT0694>=481  && ZT0694<=500)  || (ZT0694>=501  && ZT0694<=520)  || (ZT0694>=521  && ZT0694<=540)  || (ZT0694>=541  && ZT0694<=560)  || (ZT0694>=561  && ZT0694<=580)  || (ZT0694>=581  && ZT0694<=600))))
+{
+  ZT0065 =    2 ;
+}else
+if( (ZT0593>=441  && ZT0593<=460)  && ZT0694>=600)
+{
+  ZT0065 =    1 ;
+}else
+if( ((ZT0593>=461  && ZT0593<=480)  || (ZT0593>=481  && ZT0593<=500)  || (ZT0593>=501  && ZT0593<=520)  || ZT0593>=521)  && ((ZT0694<=440  || (ZT0694>=441  && ZT0694<=460)  || (ZT0694>=461  && ZT0694<=480)  || (ZT0694>=481  && ZT0694<=500)  || (ZT0694>=501  && ZT0694<=520)  || (ZT0694>=521  && ZT0694<=540)  || (ZT0694>=541  && ZT0694<=560)  || (ZT0694>=561  && ZT0694<=580)  || (ZT0694>=581  && ZT0694<=600)  || ZT0694>=601)))
+{
+  ZT0065 =    1 ;
+}
+
+}catch(Exception attributeErr)
+{throw new CDSEException("ZT0065:"+attributeErr.getMessage());}
+
+try{
+ if(  ZT0381==1.1 ) ZT0248 = 8.5;
+ else if(  ZT0381==1.2 ) ZT0248 = 7.65;
+ else if(  ZT0381==1.3 ) ZT0248 = 7.23;
+ else if(  ZT0381==2.1 ) ZT0248 = 6.38;
+ else if(  ZT0381==2.2 ) ZT0248 = 5.95;
+ else if(  ZT0381==3.1 ) ZT0248 = 5.1;
+ else if(  ZT0381==3.2 ) ZT0248 = 4.25;
+ else if(  ZT0381==4.1 ) ZT0248 = 0;
+ else if(  ZT0381==4.2 ) ZT0248 = 0;
+ else if(  ZT0381==4.3 ) ZT0248 = 0;
+
+}catch(Exception attributeErr)
+{throw new CDSEException("ZT0248:"+attributeErr.getMessage());}
+
+try{
+ if(  ZT0381==1.1 ) ZT0249 = 11;
+ else if(  ZT0381==1.2 ) ZT0249 = 9.9;
+ else if(  ZT0381==1.3 ) ZT0249 = 9.35;
+ else if(  ZT0381==2.1 ) ZT0249 = 8.25;
+ else if(  ZT0381==2.2 ) ZT0249 = 7.7;
+ else if(  ZT0381==3.1 ) ZT0249 = 6.6;
+ else if(  ZT0381==3.2 ) ZT0249 = 5.5;
+ else if(  ZT0381==4.1 ) ZT0249 = 0;
+ else if(  ZT0381==4.2 ) ZT0249 = 0;
+ else if(  ZT0381==4.3 ) ZT0249 = 0;
+
+}catch(Exception attributeErr)
+{throw new CDSEException("ZT0249:"+attributeErr.getMessage());}
+
+try{
+ if(  ZT0381==1.1 ) ZT0250 = 10;
+ else if(  ZT0381==1.2 ) ZT0250 = 9;
+ else if(  ZT0381==2.1 ) ZT0250 = 7.5;
+ else if(  ZT0381==2.2 ) ZT0250 = 7;
+ else if(  ZT0381==3.1 ) ZT0250 = 6;
+ else if(  ZT0381==3.2 ) ZT0250 = 5;
+ else if(  ZT0381==4.1 ) ZT0250 = 0;
+ else if(  ZT0381==4.2 ) ZT0250 = 0;
+ else if(  ZT0381==4.3 ) ZT0250 = 0;
+ else if(  ZT0381==1.3 ) ZT0250 = 8.5;
+
+}catch(Exception attributeErr)
+{throw new CDSEException("ZT0250:"+attributeErr.getMessage());}
+
+try{
+if( ZT0065==4)
+{
+  ZT0039 =    4 ;
+}else
+if( ZT0067==1)
+{
+  ZT0039 =    3 ;
+}else
+if( ZT0065==3)
+{
+  ZT0039 =    3 ;
+}else
+if( ZT0065==2)
+{
+  ZT0039 =    2 ;
+}else
+if( ZT0065==1)
+{
+  ZT0039 =    1 ;
+}
+
+}catch(Exception attributeErr)
+{throw new CDSEException("ZT0039:"+attributeErr.getMessage());}
+
+try{
+if( ZT0058==4)
+{
+  ZT0040 =    0 ;
+}else
+if( ZT0058==3)
+{
+  ZT0040 =    0.3 ;
+}else
+if( ZT0058==2)
+{
+  ZT0040 =    0.35 ;
+}else
+if( ZT0058==1)
+{
+  ZT0040 =    0.45 ;
+}
+
+}catch(Exception attributeErr)
+{throw new CDSEException("ZT0040:"+attributeErr.getMessage());}
+
+try{
+if( ZT0361==1)
+{
+  ZT0077 =    ZT0248 ;
+}else
+if( ZT0361==2)
+{
+  ZT0077 =    ZT0249 ;
+}else
+if( ZT0361==3)
+{
+  ZT0077 =    ZT0250 ;
+}
+
+}catch(Exception attributeErr)
+{throw new CDSEException("ZT0077:"+attributeErr.getMessage());}
+
+try{
+  ZT0404 =  (  ZT0078  *   ZT0077 ) + (  ZT0077  *   ZT0078  *   ZT0076 );
+
+}catch(Exception attributeErr)
+{throw new CDSEException("ZT0404:"+attributeErr.getMessage());}
+
+try{
+  ZT0045 =  (  ZT0077  *   ZT0064 ) + (  ZT0076  *   ZT0064  *   ZT0077 )     ;
+
+}catch(Exception attributeErr)
+{throw new CDSEException("ZT0045:"+attributeErr.getMessage());}
+
+try{
+  ZT0046 =    ROUND(ZT0404,Double.parseDouble(new String("-3"))) ;
+
+}catch(Exception attributeErr)
+{throw new CDSEException("ZT0046:"+attributeErr.getMessage());}
+
+try{
+if( AT0306<=ZT0044  && AT0306<=ZT0046)
+{
+  ZT0047 =    AT0306 ;
+}else
+if( ZT0046<=AT0306  && ZT0046<=ZT0044)
+{
+  ZT0047 =    ZT0046 ;
+}else{
+
+  ZT0047 =    ZT0044 ;
+}
+
+}catch(Exception attributeErr)
+{throw new CDSEException("ZT0047:"+attributeErr.getMessage());}
+
+try{
+if( ZT0077<=0)
+{
+  ZT0251 =    0 ;
+}else
+if( AT0337>=ZT0047)
+{
+  ZT0251 =    AT0337 ;
+}else{
+
+  ZT0251 =    ZT0047 ;
+}
+
+}catch(Exception attributeErr)
+{throw new CDSEException("ZT0251:"+attributeErr.getMessage());}
+
+try{
+if( AT0101==0  || AT0101==-999)
+{
+  ZT0050 =    0 ;
+}else{
+
+  ZT0050 =    ZT0251  / ( 0.33 *ZT0064 );
+}
+
+}catch(Exception attributeErr)
+{throw new CDSEException("ZT0050:"+attributeErr.getMessage());}
+}
+//$END_FUNCTION$
+//$BEGIN_FUNCTION$
+private void evalParam()throws CDSEException{
+//------控制逻辑参数赋值部分------
+}
+//$END_FUNCTION$
+//$BEGIN_FUNCTION$
+private void initMap(){
+if(initMapFlag==false){
+diMap = new Hashtable();
+rcMap = new Hashtable();
+rcMap.put("GR0002","建议通过、人工审核额度及期数");
+rcMap.put("GR0003","人工审核额度及期数");
+rcMap.put("GR0004","抵押类产品，人工授信并赋予额度。");
+rcMap.put("II0001","I类（资料核查）申请件");
+rcMap.put("JJ0001","不符合入组条件");
+rcMap.put("JJ0067","年龄不符合政策要求");
+rcMap.put("JJ0098","直接拒绝");
+rcMap.put("PO0001","建议拒绝");
+rcMap.put("PP0001","自动批准");
+rcMap.put("PZ0001","建议批准");
+diMap.put("RESULT_A","自动批准");
+diMap.put("RESULT_B","建议批准");
+diMap.put("RESULT_C","建议拒绝");
+diMap.put("RESULT_D","自动拒绝");
+diMap.put("RESULT_E","入组拒绝");
+diMap.put("RESULT_F","人工授信");
+diMap.put("RESULT_I","资料核查");
+initMapFlag=true;
+}
+}
+//$END_FUNCTION$
+//$BEGIN_FUNCTION$
+private void DecisionItem(String __STGTRKFID,String __STGTRKID,String code,String desc,double __USER_ACTION)throws Exception{
+_STGTRKFID=appendValueToArray(_STGTRKFID,__STGTRKFID);
+_STGTRKID=appendValueToArray(_STGTRKID,__STGTRKID);
+_DECISION_ITEM_CODE = code;
+_DECISION_ITEM_DESC = desc;
+_USER_ACTION=__USER_ACTION;
+}
+//$END_FUNCTION$
+//$BEGIN_FUNCTION$
+private void DecisionItem(String __STGTRKFID, String __STGTRKID,String _diCode) throws Exception{
+if("RESULT_A".equals(_diCode)){
+DecisionItem(__STGTRKFID,__STGTRKID,"RESULT_A","自动批准",0.0);
+}
+else if("RESULT_B".equals(_diCode)){
+DecisionItem(__STGTRKFID,__STGTRKID,"RESULT_B","建议批准",0.0);
+}
+else if("RESULT_C".equals(_diCode)){
+DecisionItem(__STGTRKFID,__STGTRKID,"RESULT_C","建议拒绝",0.0);
+}
+else if("RESULT_D".equals(_diCode)){
+DecisionItem(__STGTRKFID,__STGTRKID,"RESULT_D","自动拒绝",0.0);
+}
+else if("RESULT_E".equals(_diCode)){
+DecisionItem(__STGTRKFID,__STGTRKID,"RESULT_E","入组拒绝",0.0);
+}
+else if("RESULT_F".equals(_diCode)){
+DecisionItem(__STGTRKFID,__STGTRKID,"RESULT_F","人工授信",0.0);
+}
+else if("RESULT_I".equals(_diCode)){
+DecisionItem(__STGTRKFID,__STGTRKID,"RESULT_I","资料核查",0.0);
+}
+}
+//$END_FUNCTION$
+//$BEGIN_FUNCTION$
+private void ReasonCode(String code)throws Exception{
+	_REASON_CODE = appendValueToArray(_REASON_CODE,code);
+	_REASON_DESC = appendValueToArray(_REASON_DESC,(String)rcMap.get(code));
+}
+//$END_FUNCTION$
+//$BEGIN_FUNCTION$
+private void NIReasonCode(String code)throws Exception{
+	_NI_REASON_CODE = appendValueToArray(_NI_REASON_CODE,code);
+	_NI_REASON_DESC = appendValueToArray(_NI_REASON_DESC,(String)rcMap.get(code));
+}
+//$END_FUNCTION$
+//$BEGIN_FUNCTION$
+private void armtk_ST001_V1()throws CDSEException{
+try{
+String _TMP_INCLUSION="";
+_T_PATH=new StringBuffer();
+_T_FPATH=new StringBuffer();
+if((AT0004==1)==false){
+	_TMP_INCLUSION += "|BAIDU_GX_GROUP1";
+_T_PATH.append("|");
+_T_FPATH.append("|[]");
+NIReasonCode("JJ0001");
+}
+if((ZT0121==1)==false){
+	_TMP_INCLUSION += "|BAIDU_GX_GROUP10";
+_T_PATH.append("|");
+_T_FPATH.append("|[]");
+NIReasonCode("JJ0001");
+}
+if((AT0397==1)==false){
+	_TMP_INCLUSION += "|BAIDU_GX_GROUP11";
+_T_PATH.append("|");
+_T_FPATH.append("|[]");
+NIReasonCode("JJ0001");
+}
+if((AT0003>=18 && AT0003<=45)==false){
+	_TMP_INCLUSION += "|BAIDU_GX_GROUP2";
+_T_PATH.append("|");
+_T_FPATH.append("|[]");
+NIReasonCode("JJ0001");
+}
+if((AT0016==2)==false){
+	_TMP_INCLUSION += "|BAIDU_GX_GROUP3";
+_T_PATH.append("|");
+_T_FPATH.append("|[]");
+NIReasonCode("JJ0001");
+}
+if((AT0017>3 || AT0017==0)==false){
+	_TMP_INCLUSION += "|BAIDU_GX_GROUP4";
+_T_PATH.append("|");
+_T_FPATH.append("|[]");
+NIReasonCode("JJ0001");
+}
+if((AT0020==2)==false){
+	_TMP_INCLUSION += "|BAIDU_GX_GROUP5";
+_T_PATH.append("|");
+_T_FPATH.append("|[]");
+NIReasonCode("JJ0001");
+}
+if((AT0361==1)==false){
+	_TMP_INCLUSION += "|BAIDU_GX_GROUP6";
+_T_PATH.append("|");
+_T_FPATH.append("|[]");
+NIReasonCode("JJ0001");
+}
+if((AT0334!=1)==false){
+	_TMP_INCLUSION += "|BAIDU_GX_GROUP7";
+_T_PATH.append("|");
+_T_FPATH.append("|[]");
+NIReasonCode("JJ0001");
+}
+if((AT0349==2 || (AT0349==1 && AT0363==1))==false){
+	_TMP_INCLUSION += "|BAIDU_GX_GROUP8";
+_T_PATH.append("|");
+_T_FPATH.append("|[]");
+NIReasonCode("JJ0001");
+}
+if((ZT0120==1)==false){
+	_TMP_INCLUSION += "|BAIDU_GX_GROUP9";
+_T_PATH.append("|");
+_T_FPATH.append("|[]");
+NIReasonCode("JJ0001");
+}
+if((AT0003>=18 && AT0003<=45)==false){
+	_TMP_INCLUSION += "|GX_APPLY_1";
+_T_PATH.append("|[AT0003|"+AT0003+"],[AT0003|"+AT0003+"]");
+_T_FPATH.append("|[AT0003|"+AT0003+"|>=||18,AT0003|"+AT0003+"|<=||45]");
+NIReasonCode("JJ0001");
+}
+if((AT0402==1 || (AT0024==1 && AT0326==1 && AT0008==1))==false){
+	_TMP_INCLUSION += "|GX_APPLY_3";
+_T_PATH.append("|[AT0402|"+AT0402+"],[AT0024|"+AT0024+"],[AT0326|"+AT0326+"],[AT0008|"+AT0008+"]");
+_T_FPATH.append("|[AT0402|"+AT0402+"|=||1,(AT0024|"+AT0024+"|=||1,AT0326|"+AT0326+"|=||1,AT0008|"+AT0008+"|=||1)]");
+NIReasonCode("JJ0001");
+}
+if((AT0101>=1500)==false){
+	_TMP_INCLUSION += "|GX_APPLY_4";
+_T_PATH.append("|[AT0101|"+AT0101+"]");
+_T_FPATH.append("|[AT0101|"+AT0101+"|>=||1500]");
+NIReasonCode("JJ0001");
+}
+if((AT0015>=6)==false){
+	_TMP_INCLUSION += "|GX_APPLY_5";
+_T_PATH.append("|[AT0015|"+AT0015+"]");
+_T_FPATH.append("|[AT0015|"+AT0015+"|>=||6]");
+NIReasonCode("JJ0001");
+}
+if(!"".equals(_TMP_INCLUSION)){
+	_TMP_INCLUSION = _TMP_INCLUSION.substring(1);
+}
+_STGTRKINCLUSION = appendValueToArray(_STGTRKINCLUSION, _TMP_INCLUSION);
+_STGTRKNAME = appendValueToArray(_STGTRKNAME,"ST001");
+//入组条件不满足
+if(!"".equals(_TMP_INCLUSION)){
+	DecisionItem("0","0","RESULT_E");
+		ReasonCode("JJ0001");
+} else {
+//执行策略项
+	if (ZT0039==1){
+		_T_PATH.append("|[ZT0039|"+ZT0039+"]");
+		_T_FPATH.append("|[ZT0039|"+ZT0039+"|=||1]");
+		DecisionItem("0","1","RESULT_A");
+		ReasonCode("PP0001");
+	}
+	else if (ZT0039==2){
+		_T_PATH.append("|[ZT0039|"+ZT0039+"]");
+		_T_FPATH.append("|[ZT0039|"+ZT0039+"|=||2]");
+		DecisionItem("0","2","RESULT_B");
+		ReasonCode("GR0002");
+	}
+	else if (ZT0039==3){
+		_T_PATH.append("|[ZT0039|"+ZT0039+"]");
+		_T_FPATH.append("|[ZT0039|"+ZT0039+"|=||3]");
+		if (ZT0067==1){
+			_T_PATH.append("|[ZT0067|"+ZT0067+"]");
+			_T_FPATH.append("|[ZT0067|"+ZT0067+"|=||1]");
+			DecisionItem("3","5","RESULT_I");
+			ReasonCode("II0001");
+		}
+		else if (ZT0067==2){
+			_T_PATH.append("|[ZT0067|"+ZT0067+"]");
+			_T_FPATH.append("|[ZT0067|"+ZT0067+"|=||2]");
+			DecisionItem("3","6","RESULT_C");
+			ReasonCode("GR0003");
+		}
+	}
+	else if (ZT0039==4){
+		_T_PATH.append("|[ZT0039|"+ZT0039+"]");
+		_T_FPATH.append("|[ZT0039|"+ZT0039+"|=||4]");
+		DecisionItem("0","4","RESULT_D");
+		ReasonCode("JJ0098");
+	}
+}
+if(_T_PATH.length()>0){_STGTRKPATH = appendValueToArray(_STGTRKPATH,_T_PATH.substring(1));}else{_STGTRKPATH = appendValueToArray(_STGTRKPATH, "");}
+if(_T_FPATH.length()>0){_STGTRKFULLPATH = appendValueToArray(_STGTRKFULLPATH,_T_FPATH.substring(1));}else{_STGTRKFULLPATH = appendValueToArray(_STGTRKFULLPATH, "");}
+
+}catch(Exception err){
+	throw new CDSEException("ST001:" + err.getMessage());
+}
+}
+//$END_FUNCTION$
+//$BEGIN_FUNCTION$
+private void armtkProduct()throws CDSEException{
+}
+//$END_FUNCTION$
+//$BEGIN_FUNCTION$
+private void armtkWarningInfo()throws CDSEException{
+}
+//$END_FUNCTION$
+//$BEGIN_FUNCTION$
+private void armtkPortfolio()throws CDSEException{
+}
+//$END_FUNCTION$
+//$BEGIN_FUNCTION$
+private void buildOutputParam(List $2) throws CDSEException{
+//------生成输出参数列表------
+CDSEParam param = null;
+param = new CDSEParam();
+param.setName("_DECISION_ITEM_CODE");
+param.setDesc("决策项编码");
+param.setDataType("C");
+param.setArray(false);
+param.setStringValue( _DECISION_ITEM_CODE);
+$2.add(param);
+param = new CDSEParam();
+param.setName("_DECISION_ITEM_DESC");
+param.setDesc("决策项描述");
+param.setDataType("C");
+param.setArray(false);
+param.setStringValue( _DECISION_ITEM_DESC);
+$2.add(param);
+param = new CDSEParam();
+param.setName("_NI_REASON_CODE");
+param.setDesc("不入组原因代码");
+param.setDataType("C");
+param.setArray(true);
+param.setStringArrayValue( _NI_REASON_CODE);
+$2.add(param);
+param = new CDSEParam();
+param.setName("_NI_REASON_DESC");
+param.setDesc("不入组原因描述");
+param.setDataType("C");
+param.setArray(true);
+param.setStringArrayValue( _NI_REASON_DESC);
+$2.add(param);
+param = new CDSEParam();
+param.setName("_REASON_CODE");
+param.setDesc("原因代码");
+param.setDataType("C");
+param.setArray(true);
+param.setStringArrayValue( _REASON_CODE);
+$2.add(param);
+param = new CDSEParam();
+param.setName("_REASON_DESC");
+param.setDesc("原因描述");
+param.setDataType("C");
+param.setArray(true);
+param.setStringArrayValue( _REASON_DESC);
+$2.add(param);
+param = new CDSEParam();
+param.setName("_STGTRKFID");
+param.setDesc("策略跟踪次尾节点号");
+param.setDataType("C");
+param.setArray(true);
+param.setStringArrayValue( _STGTRKFID);
+$2.add(param);
+param = new CDSEParam();
+param.setName("_STGTRKFULLPATH");
+param.setDesc("跟踪全路径");
+param.setDataType("C");
+param.setArray(true);
+param.setStringArrayValue( _STGTRKFULLPATH);
+$2.add(param);
+param = new CDSEParam();
+param.setName("_STGTRKID");
+param.setDesc("策略跟踪节点号");
+param.setDataType("C");
+param.setArray(true);
+param.setStringArrayValue( _STGTRKID);
+$2.add(param);
+param = new CDSEParam();
+param.setName("_STGTRKINCLUSION");
+param.setDesc("不入组条件");
+param.setDataType("C");
+param.setArray(true);
+param.setStringArrayValue( _STGTRKINCLUSION);
+$2.add(param);
+param = new CDSEParam();
+param.setName("_STGTRKNAME");
+param.setDesc("策略跟踪策略名称");
+param.setDataType("C");
+param.setArray(true);
+param.setStringArrayValue( _STGTRKNAME);
+$2.add(param);
+param = new CDSEParam();
+param.setName("_STGTRKPATH");
+param.setDesc("跟踪路径变量");
+param.setDataType("C");
+param.setArray(true);
+param.setStringArrayValue( _STGTRKPATH);
+$2.add(param);
+param = new CDSEParam();
+param.setName("ZT0036");
+param.setDesc("新欺诈评分");
+param.setDataType("N");
+param.setArray(false);
+param.setDoubleValue( (double)ZT0036);
+$2.add(param);
+param = new CDSEParam();
+param.setName("ZT0037");
+param.setDesc("欺诈风险等级");
+param.setDataType("N");
+param.setArray(false);
+param.setDoubleValue( (double)ZT0037);
+$2.add(param);
+param = new CDSEParam();
+param.setName("ZT0039");
+param.setDesc("风险等级(流程控制)");
+param.setDataType("N");
+param.setArray(false);
+param.setDoubleValue( (double)ZT0039);
+$2.add(param);
+param = new CDSEParam();
+param.setName("ZT0040");
+param.setDesc("月还款能力为月收入倍数");
+param.setDataType("N");
+param.setArray(false);
+param.setDoubleValue( (double)ZT0040);
+$2.add(param);
+param = new CDSEParam();
+param.setName("ZT0044");
+param.setDesc("产品高限判断");
+param.setDataType("N");
+param.setArray(false);
+param.setDoubleValue( (double)ZT0044);
+$2.add(param);
+param = new CDSEParam();
+param.setName("ZT0045");
+param.setDesc("按月收入计算额度");
+param.setDataType("N");
+param.setArray(false);
+param.setDoubleValue( (double)ZT0045);
+$2.add(param);
+param = new CDSEParam();
+param.setName("ZT0046");
+param.setDesc("四舍五入按月收入计算额度");
+param.setDataType("N");
+param.setArray(false);
+param.setDoubleValue( (double)ZT0046);
+$2.add(param);
+param = new CDSEParam();
+param.setName("ZT0047");
+param.setDesc("期望申请的最高额度与产品额度上限与月收入计算额度取最小");
+param.setDataType("N");
+param.setArray(false);
+param.setDoubleValue( (double)ZT0047);
+$2.add(param);
+param = new CDSEParam();
+param.setName("ZT0049");
+param.setDesc("城市四大等级");
+param.setDataType("N");
+param.setArray(false);
+param.setDoubleValue( (double)ZT0049);
+$2.add(param);
+param = new CDSEParam();
+param.setName("ZT0050");
+param.setDesc("贷款期数初值");
+param.setDataType("N");
+param.setArray(false);
+param.setDoubleValue( (double)ZT0050);
+$2.add(param);
+param = new CDSEParam();
+param.setName("ZT0058");
+param.setDesc("定价等级");
+param.setDataType("N");
+param.setArray(false);
+param.setDoubleValue( (double)ZT0058);
+$2.add(param);
+param = new CDSEParam();
+param.setName("ZT0059");
+param.setDesc("城市收入类别");
+param.setDataType("N");
+param.setArray(false);
+param.setDoubleValue( (double)ZT0059);
+$2.add(param);
+param = new CDSEParam();
+param.setName("ZT0060");
+param.setDesc("A类评级收入预警值");
+param.setDataType("N");
+param.setArray(false);
+param.setDoubleValue( (double)ZT0060);
+$2.add(param);
+param = new CDSEParam();
+param.setName("ZT0061");
+param.setDesc("B类评级收入预警值");
+param.setDataType("N");
+param.setArray(false);
+param.setDoubleValue( (double)ZT0061);
+$2.add(param);
+param = new CDSEParam();
+param.setName("ZT0062");
+param.setDesc("C类评级收入预警值");
+param.setDataType("N");
+param.setArray(false);
+param.setDoubleValue( (double)ZT0062);
+$2.add(param);
+param = new CDSEParam();
+param.setName("ZT0063");
+param.setDesc("D类评级收入预警值");
+param.setDataType("N");
+param.setArray(false);
+param.setDoubleValue( (double)ZT0063);
+$2.add(param);
+param = new CDSEParam();
+param.setName("ZT0064");
+param.setDesc("月收入与风险预警值判断");
+param.setDataType("N");
+param.setArray(false);
+param.setDoubleValue( (double)ZT0064);
+$2.add(param);
+param = new CDSEParam();
+param.setName("ZT0065");
+param.setDesc("风险等级(评分展现)");
+param.setDataType("N");
+param.setArray(false);
+param.setDoubleValue( (double)ZT0065);
+$2.add(param);
+param = new CDSEParam();
+param.setName("ZT0066");
+param.setDesc("额度风险预警阀值");
+param.setDataType("N");
+param.setArray(false);
+param.setDoubleValue( (double)ZT0066);
+$2.add(param);
+param = new CDSEParam();
+param.setName("ZT0067");
+param.setDesc("是否触发风险预警规则");
+param.setDataType("N");
+param.setArray(false);
+param.setDoubleValue( (double)ZT0067);
+$2.add(param);
+param = new CDSEParam();
+param.setName("ZT0076");
+param.setDesc("各产品系数(P2P工薪)");
+param.setDataType("N");
+param.setArray(false);
+param.setDoubleValue( (double)ZT0076);
+$2.add(param);
+param = new CDSEParam();
+param.setName("ZT0077");
+param.setDesc("城市等级系数");
+param.setDataType("N");
+param.setArray(false);
+param.setDoubleValue( (double)ZT0077);
+$2.add(param);
+param = new CDSEParam();
+param.setName("ZT0078");
+param.setDesc("百度截取后月收入初始值");
+param.setDataType("N");
+param.setArray(false);
+param.setDoubleValue( (double)ZT0078);
+$2.add(param);
+param = new CDSEParam();
+param.setName("ZT0079");
+param.setDesc("月收入是否为空(AT0101)");
+param.setDataType("N");
+param.setArray(false);
+param.setDoubleValue( (double)ZT0079);
+$2.add(param);
+param = new CDSEParam();
+param.setName("ZT0120");
+param.setDesc("最近6个月内逾期M2M3是否符合入组");
+param.setDataType("N");
+param.setArray(false);
+param.setDoubleValue( (double)ZT0120);
+$2.add(param);
+param = new CDSEParam();
+param.setName("ZT0121");
+param.setDesc("最近12个月内逾期M2M3是否符合入组");
+param.setDataType("N");
+param.setArray(false);
+param.setDoubleValue( (double)ZT0121);
+$2.add(param);
+param = new CDSEParam();
+param.setName("ZT0123");
+param.setDesc("近6个月贷款+信用卡M2");
+param.setDataType("N");
+param.setArray(false);
+param.setDoubleValue( (double)ZT0123);
+$2.add(param);
+param = new CDSEParam();
+param.setName("ZT0248");
+param.setDesc("红灯(高风险地区)");
+param.setDataType("N");
+param.setArray(false);
+param.setDoubleValue( (double)ZT0248);
+$2.add(param);
+param = new CDSEParam();
+param.setName("ZT0249");
+param.setDesc("绿灯(低风险地区)");
+param.setDataType("N");
+param.setArray(false);
+param.setDoubleValue( (double)ZT0249);
+$2.add(param);
+param = new CDSEParam();
+param.setName("ZT0250");
+param.setDesc("一般(中风险地区)");
+param.setDataType("N");
+param.setArray(false);
+param.setDoubleValue( (double)ZT0250);
+$2.add(param);
+param = new CDSEParam();
+param.setName("ZT0251");
+param.setDesc("最终额度");
+param.setDataType("N");
+param.setArray(false);
+param.setDoubleValue( (double)ZT0251);
+$2.add(param);
+param = new CDSEParam();
+param.setName("ZT0361");
+param.setDesc("城市等级分组");
+param.setDataType("N");
+param.setArray(false);
+param.setDoubleValue( (double)ZT0361);
+$2.add(param);
+param = new CDSEParam();
+param.setName("ZT0369");
+param.setDesc("最近12个月贷款与信用卡M2逾期次数");
+param.setDataType("N");
+param.setArray(false);
+param.setDoubleValue( (double)ZT0369);
+$2.add(param);
+param = new CDSEParam();
+param.setName("ZT0370");
+param.setDesc("近12个月内贷款与信用卡M3次数是否符合要求");
+param.setDataType("N");
+param.setArray(false);
+param.setDoubleValue( (double)ZT0370);
+$2.add(param);
+param = new CDSEParam();
+param.setName("ZT0380");
+param.setDesc("新申请评分");
+param.setDataType("N");
+param.setArray(false);
+param.setDoubleValue( (double)ZT0380);
+$2.add(param);
+param = new CDSEParam();
+param.setName("ZT0381");
+param.setDesc("申请风险等级");
+param.setDataType("N");
+param.setArray(false);
+param.setDoubleValue( (double)ZT0381);
+$2.add(param);
+param = new CDSEParam();
+param.setName("ZT0403");
+param.setDesc("每月估算收入(菁英)");
+param.setDataType("N");
+param.setArray(false);
+param.setDoubleValue( (double)ZT0403);
+$2.add(param);
+param = new CDSEParam();
+param.setName("ZT0404");
+param.setDesc("收入取值(百度)最终");
+param.setDataType("N");
+param.setArray(false);
+param.setDoubleValue( (double)ZT0404);
+$2.add(param);
+param = new CDSEParam();
+param.setName("ZT0500");
+param.setDesc("3个月贷款审批次数项1 AS001(取小)");
+param.setDataType("N");
+param.setArray(false);
+param.setDoubleValue( (double)ZT0500);
+$2.add(param);
+param = new CDSEParam();
+param.setName("ZT0502");
+param.setDesc("3个月贷款审批次数项1最终 AS001(1/3次方)");
+param.setDataType("N");
+param.setArray(false);
+param.setDoubleValue( (double)ZT0502);
+$2.add(param);
+param = new CDSEParam();
+param.setName("ZT0503");
+param.setDesc("3个月贷款审批次数项2 AS002_TMP(MAX)");
+param.setDataType("N");
+param.setArray(false);
+param.setDoubleValue( (double)ZT0503);
+$2.add(param);
+param = new CDSEParam();
+param.setName("ZT0504");
+param.setDesc("3个月贷款审批次数项2最终 AS002 IN");
+param.setDataType("N");
+param.setArray(false);
+param.setDoubleValue( (double)ZT0504);
+$2.add(param);
+param = new CDSEParam();
+param.setName("ZT0506");
+param.setDesc("3个月信用卡审批次数项 最终 AS003 MIN");
+param.setDataType("N");
+param.setArray(false);
+param.setDoubleValue( (double)ZT0506);
+$2.add(param);
+param = new CDSEParam();
+param.setName("ZT0508");
+param.setDesc("6个月个人查询次数项 最终 AS004(MIN)");
+param.setDataType("N");
+param.setArray(false);
+param.setDoubleValue( (double)ZT0508);
+$2.add(param);
+param = new CDSEParam();
+param.setName("ZT0509");
+param.setDesc("房产证项 最终 AS005");
+param.setDataType("N");
+param.setArray(false);
+param.setDoubleValue( (double)ZT0509);
+$2.add(param);
+param = new CDSEParam();
+param.setName("ZT0512");
+param.setDesc("个人工资项1 AS006(ZT0510与86439比较大小)");
+param.setDataType("N");
+param.setArray(false);
+param.setDoubleValue( (double)ZT0512);
+$2.add(param);
+param = new CDSEParam();
+param.setName("ZT0513");
+param.setDesc("个人工资项1 最终 AS006(ZT0512平方)");
+param.setDataType("N");
+param.setArray(false);
+param.setDoubleValue( (double)ZT0513);
+$2.add(param);
+param = new CDSEParam();
+param.setName("ZT0514");
+param.setDesc("个人工资项2 AS007(AVG)");
+param.setDataType("N");
+param.setArray(false);
+param.setDoubleValue( (double)ZT0514);
+$2.add(param);
+param = new CDSEParam();
+param.setName("ZT0515");
+param.setDesc("个人工资项2 最终 AS007(ZT0514与14406比较大小)");
+param.setDataType("N");
+param.setArray(false);
+param.setDoubleValue( (double)ZT0515);
+$2.add(param);
+param = new CDSEParam();
+param.setName("ZT0516");
+param.setDesc("个人月进帐次数项1 AS008");
+param.setDataType("N");
+param.setArray(false);
+param.setDoubleValue( (double)ZT0516);
+$2.add(param);
+param = new CDSEParam();
+param.setName("ZT0517");
+param.setDesc("个人月进账（2次方）AS008最终");
+param.setDataType("N");
+param.setArray(false);
+param.setDoubleValue( (double)ZT0517);
+$2.add(param);
+param = new CDSEParam();
+param.setName("ZT0520");
+param.setDesc("个人月进帐金额项2 AS009(MAX最终)");
+param.setDataType("N");
+param.setArray(false);
+param.setDoubleValue( (double)ZT0520);
+$2.add(param);
+param = new CDSEParam();
+param.setName("ZT0525");
+param.setDesc("个人月末余额项 AS010(平均值)");
+param.setDataType("N");
+param.setArray(false);
+param.setDoubleValue( (double)ZT0525);
+$2.add(param);
+param = new CDSEParam();
+param.setName("ZT0526");
+param.setDesc("个人月末余额项最终 AS010(1/3次方)");
+param.setDataType("N");
+param.setArray(false);
+param.setDoubleValue( (double)ZT0526);
+$2.add(param);
+param = new CDSEParam();
+param.setName("ZT0527");
+param.setDesc("婚姻项最终 AS011");
+param.setDataType("N");
+param.setArray(false);
+param.setDoubleValue( (double)ZT0527);
+$2.add(param);
+param = new CDSEParam();
+param.setName("ZT0528");
+param.setDesc("建筑面积最终 AS012");
+param.setDataType("N");
+param.setArray(false);
+param.setDoubleValue( (double)ZT0528);
+$2.add(param);
+param = new CDSEParam();
+param.setName("ZT0529");
+param.setDesc("教育背景项最终 AS013");
+param.setDataType("N");
+param.setArray(false);
+param.setDoubleValue( (double)ZT0529);
+$2.add(param);
+param = new CDSEParam();
+param.setName("ZT0536");
+param.setDesc("借款本金项1最终 AS014(ZT0534与500000比较大小)");
+param.setDataType("N");
+param.setArray(false);
+param.setDoubleValue( (double)ZT0536);
+$2.add(param);
+param = new CDSEParam();
+param.setName("ZT0537");
+param.setDesc("借款本金项2最终 AS015(AS014平方)");
+param.setDataType("N");
+param.setArray(false);
+param.setDoubleValue( (double)ZT0537);
+$2.add(param);
+param = new CDSEParam();
+param.setName("ZT0538");
+param.setDesc("年龄项1最终 AS016");
+param.setDataType("N");
+param.setArray(false);
+param.setDoubleValue( (double)ZT0538);
+$2.add(param);
+param = new CDSEParam();
+param.setName("ZT0539");
+param.setDesc("年龄项1最终 AS017(年龄平方)");
+param.setDataType("N");
+param.setArray(false);
+param.setDoubleValue( (double)ZT0539);
+$2.add(param);
+param = new CDSEParam();
+param.setName("ZT0540");
+param.setDesc("信用卡开户时长项最终 AS018");
+param.setDataType("N");
+param.setArray(false);
+param.setDoubleValue( (double)ZT0540);
+$2.add(param);
+param = new CDSEParam();
+param.setName("ZT0541");
+param.setDesc("信用卡张数项1 AS019(去空)");
+param.setDataType("N");
+param.setArray(false);
+param.setDoubleValue( (double)ZT0541);
+$2.add(param);
+param = new CDSEParam();
+param.setName("ZT0542");
+param.setDesc("信用卡张数项1 AS019范围取值");
+param.setDataType("N");
+param.setArray(false);
+param.setDoubleValue( (double)ZT0542);
+$2.add(param);
+param = new CDSEParam();
+param.setName("ZT0544");
+param.setDesc("信用卡张数项1最终 AS019(LN)");
+param.setDataType("N");
+param.setArray(false);
+param.setDoubleValue( (double)ZT0544);
+$2.add(param);
+param = new CDSEParam();
+param.setName("ZT0545");
+param.setDesc("信用卡张数项2最终 AS020(平方)");
+param.setDataType("N");
+param.setArray(false);
+param.setDoubleValue( (double)ZT0545);
+$2.add(param);
+param = new CDSEParam();
+param.setName("ZT0546");
+param.setDesc("性别项最终 AS021");
+param.setDataType("N");
+param.setArray(false);
+param.setDoubleValue( (double)ZT0546);
+$2.add(param);
+param = new CDSEParam();
+param.setName("ZT0548");
+param.setDesc("月收入项最终 AS022(平方)");
+param.setDataType("N");
+param.setArray(false);
+param.setDoubleValue( (double)ZT0548);
+$2.add(param);
+param = new CDSEParam();
+param.setName("ZT0580");
+param.setDesc("申请评分公式Asxbeta ");
+param.setDataType("N");
+param.setArray(false);
+param.setDoubleValue( (double)ZT0580);
+$2.add(param);
+param = new CDSEParam();
+param.setName("ZT0590");
+param.setDesc("申请评分公式300-(40/log(2))*Asxbeta");
+param.setDataType("N");
+param.setArray(false);
+param.setDoubleValue( (double)ZT0590);
+$2.add(param);
+param = new CDSEParam();
+param.setName("ZT0591");
+param.setDesc("申请评分公式ROUND");
+param.setDataType("N");
+param.setArray(false);
+param.setDoubleValue( (double)ZT0591);
+$2.add(param);
+param = new CDSEParam();
+param.setName("ZT0592");
+param.setDesc("申请评分公式MIN");
+param.setDataType("N");
+param.setArray(false);
+param.setDoubleValue( (double)ZT0592);
+$2.add(param);
+param = new CDSEParam();
+param.setName("ZT0593");
+param.setDesc("申请评分公式最终AS(MAX)");
+param.setDataType("N");
+param.setArray(false);
+param.setDoubleValue( (double)ZT0593);
+$2.add(param);
+param = new CDSEParam();
+param.setName("ZT0600");
+param.setDesc("性别项 FS001最终");
+param.setDataType("N");
+param.setArray(false);
+param.setDoubleValue( (double)ZT0600);
+$2.add(param);
+param = new CDSEParam();
+param.setName("ZT0601");
+param.setDesc("3个月个人查询次数项 FS002(处理缺失)");
+param.setDataType("N");
+param.setArray(false);
+param.setDoubleValue( (double)ZT0601);
+$2.add(param);
+param = new CDSEParam();
+param.setName("ZT0604");
+param.setDesc("3个月个人查询次数项最终 FS002(二分之一次方)");
+param.setDataType("N");
+param.setArray(false);
+param.setDoubleValue( (double)ZT0604);
+$2.add(param);
+param = new CDSEParam();
+param.setName("ZT0605");
+param.setDesc("客户类型项最终 FS003");
+param.setDataType("N");
+param.setArray(false);
+param.setDoubleValue( (double)ZT0605);
+$2.add(param);
+param = new CDSEParam();
+param.setName("ZT0607");
+param.setDesc("借款本金项最终 FS004(ZT0605与80000比较大小)");
+param.setDataType("N");
+param.setArray(false);
+param.setDoubleValue( (double)ZT0607);
+$2.add(param);
+param = new CDSEParam();
+param.setName("ZT0608");
+param.setDesc("身份证年龄项最终 FS005");
+param.setDataType("N");
+param.setArray(false);
+param.setDoubleValue( (double)ZT0608);
+$2.add(param);
+param = new CDSEParam();
+param.setName("ZT0612");
+param.setDesc("3个月贷款审批次数项最终 FS006(平方)");
+param.setDataType("N");
+param.setArray(false);
+param.setDoubleValue( (double)ZT0612);
+$2.add(param);
+param = new CDSEParam();
+param.setName("ZT0616");
+param.setDesc("3个月信用卡审批次数最终 FS007(平方)");
+param.setDataType("N");
+param.setArray(false);
+param.setDoubleValue( (double)ZT0616);
+$2.add(param);
+param = new CDSEParam();
+param.setName("ZT0617");
+param.setDesc("联系人手机城市一致项最终 FS008");
+param.setDataType("N");
+param.setArray(false);
+param.setDoubleValue( (double)ZT0617);
+$2.add(param);
+param = new CDSEParam();
+param.setName("ZT0618");
+param.setDesc("居住性质项最终 FS009");
+param.setDataType("N");
+param.setArray(false);
+param.setDoubleValue( (double)ZT0618);
+$2.add(param);
+param = new CDSEParam();
+param.setName("ZT0619");
+param.setDesc("家庭联系人1项最终 FS010");
+param.setDataType("N");
+param.setArray(false);
+param.setDoubleValue( (double)ZT0619);
+$2.add(param);
+param = new CDSEParam();
+param.setName("ZT0620");
+param.setDesc("共同居住者最终 FS011");
+param.setDataType("N");
+param.setArray(false);
+param.setDoubleValue( (double)ZT0620);
+$2.add(param);
+param = new CDSEParam();
+param.setName("ZT0680");
+param.setDesc("欺诈评分公式Fsxbeta");
+param.setDataType("N");
+param.setArray(false);
+param.setDoubleValue( (double)ZT0680);
+$2.add(param);
+param = new CDSEParam();
+param.setName("ZT0689");
+param.setDesc("欺诈评分公式FS(MAX)");
+param.setDataType("N");
+param.setArray(false);
+param.setDoubleValue( (double)ZT0689);
+$2.add(param);
+param = new CDSEParam();
+param.setName("ZT0690");
+param.setDesc("欺诈评分公式(300-(40/log(2))*xbeta_frau)");
+param.setDataType("N");
+param.setArray(false);
+param.setDoubleValue( (double)ZT0690);
+$2.add(param);
+param = new CDSEParam();
+param.setName("ZT0691");
+param.setDesc("欺诈评分公式FS_TMP1(ROUND)");
+param.setDataType("N");
+param.setArray(false);
+param.setDoubleValue( (double)ZT0691);
+$2.add(param);
+param = new CDSEParam();
+param.setName("ZT0692");
+param.setDesc("欺诈评分公式FS_TMP2");
+param.setDataType("N");
+param.setArray(false);
+param.setDoubleValue( (double)ZT0692);
+$2.add(param);
+param = new CDSEParam();
+param.setName("ZT0693");
+param.setDesc("欺诈评分公式FS(MIN)");
+param.setDataType("N");
+param.setArray(false);
+param.setDoubleValue( (double)ZT0693);
+$2.add(param);
+param = new CDSEParam();
+param.setName("ZT0694");
+param.setDesc("欺诈评分公式FS最终(ROUND)");
+param.setDataType("N");
+param.setArray(false);
+param.setDoubleValue( (double)ZT0694);
+$2.add(param);
+param = new CDSEParam();
+param.setName("ZT0603");
+param.setDesc("3个月个人查询次数项 FS002(MAX)");
+param.setDataType("N");
+param.setArray(false);
+param.setDoubleValue( (double)ZT0603);
+$2.add(param);
+}
+//$END_FUNCTION$
+//$BEGIN_FUNCTION$
+public boolean decisionMaking(Map $1,List $2) throws Exception{ 
+initMap();
+initAttritute();
+evalExtAttribute($1);
+armtkAttribute();
+evalParam();
+//------生成控制逻辑部分------
+if(true){
+//执行策略：ST001:百度工薪贷策略;
+armtk_ST001_V1();
+}
+armtkProduct();
+armtkWarningInfo();
+armtkPortfolio();
+buildOutputParam($2);
+return true;}
+//$END_FUNCTION$
+//$END$
+}]]></CDSScript>
+</CDS>

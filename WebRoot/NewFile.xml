@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xml>
+	<data>
+		<result acquisitionStrategyID="STG3030_3_D" amountlandStrategyID="" applicantRandomDigitID="750" applicationId="2011072000001" aprAnnIncome="" creditScore="" exchangeRate="8.0" hasDownSell="0" initLineReasonCode="DR102" initLineReasonDescription="纯粹附属卡，不存在主卡的额度问题。" principalCashAdvanceFRC="0" principalCashAdvanceRMB="0" principalInitialLineFRC="0" principalInitialLineRMB="0" principalResultDescription="" principalResultID="" productCode="1002" riskGrade="0" riskScore="0" scorecardID="" strategiesLogID="20110720000012015111908:52:49" strategyID="20110720000012015111908:52:49" underwritingReasonCode="DR102" underwritingReasonDescription="纯粹附属卡，不存在主卡的授信问题。" usageGrade="0" usageScore="0">
+			<supplData supplCashAdvanceFRC="0" supplCashAdvanceRMB="0" supplID="1" supplInitialLineFRC="0" supplInitialLineRMB="0" supplResultDescription="人工审查" supplResultID="D" supplUwReasonCode="RR007" supplUwReasonDescription="附属卡申请人年龄小于13岁"/>
+			<supplData supplCashAdvanceFRC="0" supplCashAdvanceRMB="0" supplID="2" supplInitialLineFRC="0" supplInitialLineRMB="0" supplResultDescription="人工审查" supplResultID="D" supplUwReasonCode="RR007" supplUwReasonDescription="附属卡申请人年龄小于13岁"/>
+		</result>
+	</data>
+</xml>
+

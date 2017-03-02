@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project-module
+  type="WEB"
+  name="bocJmsTestWebNew_Api"
+  id="myeclipse.1225440410718"
+  context-root="/bocJmsTestWeb1"
+  j2ee-spec="1.4"
+  archive="bocJmsTestWebNew_Api.war">
+  <attributes>
+    <attribute name="webrootdir" value="WebRoot" />
+  </attributes>
+</project-module>
+

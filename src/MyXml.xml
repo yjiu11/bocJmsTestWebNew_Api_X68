@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><?xml-stylesheet href="./DATA_RESULT_STRUCT.xsl" type="text/xsl"?>
+<xml>
+	<data>
+		<result acquisitionStrategyID="STG3030_3_A" amountlandStrategyID="" applicantRandomDigitID="609" applicationId="2011072000001" aprAnnIncome="" creditScore="" decisionPoint="" exchangeRate="8.0" hasDownSell="0" initLineReasonCode="DR102" initLineReasonDescription="纯粹附属卡，不存在主卡的额度问题。" isChallenge="" principalCashAdvanceFRC="0" principalCashAdvanceRMB="0" principalInitialLineFRC="0" principalInitialLineRMB="0" principalResultDescription="" principalResultID="" productCode="1002" riskGrade="0" riskScore="0" scorecardID="" strategiesLogID="20110720000012015111920:41:07" strategyID="20110720000012015111920:41:07" underwritingReasonCode="DR102" underwritingReasonDescription="纯粹附属卡，不存在主卡的授信问题。" usageGrade="0" usageScore="0">
+			<supplData supplCashAdvanceFRC="0" supplCashAdvanceRMB="0" supplID="1" supplInitialLineFRC="0" supplInitialLineRMB="" supplResultDescription="批准授信" supplResultID="A" supplUwReasonCode="AA004" supplUwReasonDescription="附属卡客户满足年龄要求"/>
+		</result>
+	</data>
+</xml>

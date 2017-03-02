@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.2//EN" "struts-config_1_2.dtd">
+<struts-config>
+  <action-mappings>
+    <action path="/CDS-0010" type="com.cfchina.cdse.action.CreateDomAction">
+      <forward name="input" path="/CreateData.jsp" />
+      <forward name="showResult" path="/ExportApplication.jsp" />
+    </action>
+    <action path="/CDS-0020" type="com.cfchina.cdse.action.GetDomQueueAction">
+      <forward name="showResult" path="/ExportApplication.jsp" />
+    </action>
+  </action-mappings>
+</struts-config>
